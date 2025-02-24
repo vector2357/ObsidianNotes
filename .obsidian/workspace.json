@@ -1,0 +1,257 @@
+{
+  "main": {
+    "id": "97a38be695db0ef8",
+    "type": "split",
+    "children": [
+      {
+        "id": "5420f02185adc22e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a90896dc4133444e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Arquitetura de Computadores II.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Arquitetura de Computadores II"
+            }
+          },
+          {
+            "id": "c1267f32c31c3c48",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fundamentos da Computação III.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fundamentos da Computação III"
+            }
+          },
+          {
+            "id": "254c7e4aa8a19beb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Estrutura de Dados II.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Estrutura de Dados II"
+            }
+          },
+          {
+            "id": "32ab838e4eda2dc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Redes de Computadores II.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Redes de Computadores II"
+            }
+          },
+          {
+            "id": "e9ea40155feb7d02",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "JDBC (canvas).canvas",
+                "viewState": {
+                  "x": 1260.6527264038168,
+                  "y": 463.3845773659384,
+                  "zoom": -1.5698348262559645
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "JDBC (canvas)"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3e3057086fbd7dc7",
+    "type": "split",
+    "children": [
+      {
+        "id": "0dadc2afdf953bee",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34158fadf96a6f21",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0263e319491c7269",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b9341510c680a942",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "89fa0415998ceec0",
+    "type": "split",
+    "children": [
+      {
+        "id": "5676f42195c3b8d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "01c305afcc108d07",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "JDBC - Java DB Connection.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for JDBC - Java DB Connection"
+            }
+          },
+          {
+            "id": "ea4494531efc004b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "JDBC - Java DB Connection.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from JDBC - Java DB Connection"
+            }
+          },
+          {
+            "id": "8aef13ff704d3b1f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "67bcb9355d1a0c28",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "JDBC - Java DB Connection.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of JDBC - Java DB Connection"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "c1267f32c31c3c48",
+  "lastOpenFiles": [
+    "Images/Pasted image 20250218145743.png",
+    "Images/Pasted image 20250218150232.png",
+    "Images/Pasted image 20250222225237.png",
+    "Arquitetura de Computadores II.md",
+    "Redes de Computadores II.md",
+    "Fundamentos da Computação III.md",
+    "Estrutura de Dados II.md",
+    "JDBC (canvas).canvas",
+    "JDBC - Java DB Connection.md",
+    "Pasted image 20250222225237.png",
+    "Pasted image 20250218150232.png",
+    "Pasted image 20250218145743.png",
+    "Drawing 2025-02-17 23.30.31.excalidraw.md",
+    "Images/Pasted image 20250217213910.png",
+    "Images",
+    "Images/Pasted image 20250217232840.png",
+    "Images/Pasted image 20250217232749.png",
+    "Images/Pasted image 20250217215200.png",
+    "Images/Pasted image 20250217214010.png",
+    "Padrão DAO (Data Access Object).md",
+    "Excalidraw/Drawing 2025-02-16 01.36.02.excalidraw.md",
+    "Excalidraw",
+    "Arquitetura de Computadores II/Untitled.md",
+    "Arquitetura de Computadores II",
+    "Transações Banco de Dados.md",
+    "2025-01-11.md"
+  ]
+}
