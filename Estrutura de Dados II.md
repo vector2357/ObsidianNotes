@@ -123,3 +123,31 @@ Podemos considerar então que a função $g(n) = n^2$ é assintótica à $T(n)$ 
 Podemos então definir a complexidade desse algoritmo no **pior caso**, <span style="color:rgb(146, 208, 80)">na notação Omega</span> $(\Omega)$, como sendo: 
 
 $$\Omega(n^2)$$
+
+
+#### <span style="color:rgb(146, 208, 80)">Notação</span> $\Theta$ (Theta)
+
+   A **notação** $\Theta$ nos dá um limite <span style="color:rgb(255, 255, 0)">inferior</span> e <span style="color:rgb(0, 176, 240)">superior</span> à função de crescimento do algoritmo
+
+
+![[Pasted image 20250224205805.png]]
+
+
+Seja $f(n)$ a função de crescimento de **tempo** do algoritmo.
+
+- Se existe uma função $g(n)$ e duas constantes  $c_1, c_2 > 0$ , tal que:
+
+$$c_1.g(n)<f(n)<c_2.g(n)$$
+
+- A partir de $n\geq n_o$ , então :
+
+$$f(n) = \Theta (g(n))$$
+
+
+Se utilizarmos o exemplo do algoritmo **Insertion Sort**, cuja função de Tempo de Execução é  $T(n) = a.n^2 + b.n + c$.
+
+Podemos considerar então que a função $g(n) = n^2$ é assintótica à $T(n)$ com **limite inferior** e **limite superior**, uma vez que podemos multiplicar a função $g(n)$ de tal forma que ela seja menor e também de tal forma que ela seja maior do que $T(n)$ a partir de determinado ponto. Logo, $T(n) = \Theta(g(n))$.
+
+Podemos então definir a complexidade desse algoritmo no **pior caso**, <span style="color:rgb(146, 208, 80)">na notação Theta</span> $(\Theta)$, como sendo: 
+
+$$\Theta(n^2)$$
