@@ -112,3 +112,70 @@ char x = *(nome + 4);   // nesse caso o nome seria nossa base
 - <span style="color:rgb(146, 208, 80)">LOAD :</span>
 
 ![[Pasted image 20250218150232.png]]
+
+
+- **Componentes Utilizados em cada tipo de Instrução :**
+
+1. Aritméticas/Lógicas  :  <span style="color:rgb(255, 255, 0)">REGS + ALU</span> 
+2. Acesso a Memória  :  <span style="color:rgb(255, 255, 0)">REGS + ALU + MEM</span> 
+3. Desvio **Condicional**  :  <span style="color:rgb(255, 255, 0)">REGS+ALU + ADD+SHIFT + END DESVIO</span> 
+4. Desvio **Incondicional**  :  <span style="color:rgb(255, 255, 0)">ADD+SHIFT</span> 
+
+
+> **SHIFT**
+
+	R-Shift >>
+	L-Shift <<
+
+
+#### Fases da Instrução
+
+> GHz
+> GigaHertz
+> Frequência
+> Ciclos/segundo
+> **CLOCK**
+
+
+##### 1° - FETCH
+
+   Endereço da instrução (PC) é buscado (READ) da memória e armazenado no <span style="color:rgb(255, 255, 0)">Instruction Register (IR)</span>.
+   
+-- -
+##### 2° - DECODE + OPERANDOS
+
+   <span style="color:rgb(146, 208, 80)">Decode:</span>  o conteúdo do **IR** é passado para a **Unidade de Controle** onde ele é decodificado nos sinais de controle para executar a instrução.
+
+   <span style="color:rgb(146, 208, 80)">Operandos:</span>  os valores dos possíveis operandos são buscados no banco de registradores.
+   
+-- -
+##### 3° - EXECUTION
+
+   Operações aritméticas e lógicas da instrução são executadas **(ALU)**.
+   
+-- -
+##### 4° - RESULTS
+
+   Depende do tipo de instrução:
+
+   <span style="color:rgb(146, 208, 80)">Registradores:</span>  armazenar o resultado no registrador de destino.
+   `ADD R1, R2, R3` -> `R1 = R2 + R3`.
+
+   <span style="color:rgb(146, 208, 80)">Memória:</span>  o endereço calculado de memória é acessado **(LOAD/STORE)** e dados são escritos no endereço de memória.
+
+-- -
+##### 5° - WRITE BACK
+
+   <span style="color:rgb(146, 208, 80)">LOAD:</span>  armazenar em um registrador o conteúdo de um endereço de memória.
+
+	LD R1, R2, OFFSET
+
+* Os dados lidos da memória são armazenados no registrador de destino.
+
+-- -
+
+##### Memory
+
+   <span style="color:rgb(146, 208, 80)">MAR:</span>  *Memory Address Register*  ->  <span style="color:rgb(112, 48, 160)">(Armazena Endereço de Dados/Instrução)</span>
+
+   <span style="color:rgb(146, 208, 80)">MDR:</span>  *Memory Data Register*  ->  <span style="color:rgb(112, 48, 160)">(Armazena Dados)</span> 
