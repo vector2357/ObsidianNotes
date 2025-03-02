@@ -159,6 +159,9 @@ $$B=\begin{bmatrix}
 \end{bmatrix}$$
 
 
+#### Adição de Matrizes
+
+
 <span style="color:rgb(146, 208, 80)">Definição:</span>  <span style="color:rgb(0, 176, 240)">Adição de matrizes</span> é uma operação que consiste em adicionar os elementos correspondentes de duas matrizes de **mesma ordem**. Dada duas matrizes $A$ e $B$  de dimensões $m\times n$ , a soma resulta em uma nova matriz $C$ , também de dimensões $m\times n$ , onde cada elemento $c_{ij}$ é obtido pela adição dos elementos correspondentes das matrizes $A$ e $B$ ($c_{ij} = a_{ij} + b_{ij}$).
 
 > **Exemplo**
@@ -193,7 +196,7 @@ Dada as matrizes $A$, $B$ e $C$ de mesma ordem $m\times n$ , temos:
 3. $A+0=A$                                       <span style="color:rgb(192, 0, 0)">( elemento neutro da adição )</span> 
 
 
-##### Multiplicação de uma Matriz por um escalar
+#### Multiplicação de uma Matriz por um escalar
 
 
 <span style="color:rgb(146, 208, 80)">Definição:</span>  seja $A=[a_{ij}]_{m\times n}$  e  $k$  um escalar, então definimos uma nova matriz
@@ -210,9 +213,84 @@ $$3.\begin{bmatrix}
 \end{bmatrix}$$
 
 
-<span style="color:rgb(0, 176, 240)">Propriedades:</span>  Dada as matrizes $A$ e $B$ de mesma ordem $m\times n$ e escalares: $k, k_1, k_2$ , temos:
+##### Propriedades
+
+Dada as matrizes $A$ e $B$ de mesma ordem $m\times n$ e escalares: $k, k_1, k_2$ , temos:
 
 1. $k.(A+B) = k.A +k.B$
 2. $(k_1+k_2).A = k_1.A + k_2.B$
 3. $k_1.(k_2.A) = (k_1.k_2).A = k_2.(k_1.A)$
 4. $0.A = 0$  ->  (matriz nula)
+
+
+#### Multiplicação de Matriz
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  o produto $AB$ de uma matriz $A = [a_{ij}]_{m\times n}$ e uma matriz $B = [b_{ij}]_{n\times m}$      com um mesmo número de elementos e definido por :
+
+$$AB=\begin{bmatrix}
+a_{11} &.&.& a_{1n} \\
+. &&& \\
+.& & & \\
+a_{m1} & . & . & a_{mn}
+\end{bmatrix}
+\begin{bmatrix}
+b_{11} &.&.& b_{1m} \\
+. &&& \\
+.& & & \\
+b_{n1} & . & . & b_{nm}
+\end{bmatrix}$$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 2 \\
+4 & 5
+\end{bmatrix}$$
+$$B=\begin{bmatrix}
+1 \\
+3
+\end{bmatrix}$$
+$$AB=\begin{bmatrix}
+1 & 2 \\
+4 & 5
+\end{bmatrix}
+\begin{bmatrix}
+1 \\
+3
+\end{bmatrix}$$
+$$=\begin{bmatrix}
+1\times1 + 2\times3 \\
+4\times1 + 5\times3
+\end{bmatrix}$$
+$$=\begin{bmatrix}
+7 \\
+19
+\end{bmatrix}$$
+
+<span style="color:rgb(255, 255, 0)">Observação:</span>  só é possível multiplicar duas matrizes se, o número de *colunas* da **primeira matriz** for igual ao número de *linhas* da **segunda matriz**. Ou seja :
+
+$$A_{?\times n} \times B_{n \times ?}$$
+Resultante :
+
+$$A_{m\times n} \times B_{n\times o} = C_{m\times o}$$
+
+
+Em multiplicação de matrizes, as matrizes <span style="color:rgb(192, 0, 0)">NÃO COMUTAM</span> , ou seja :
+
+$$AB \neq BA$$
+
+**Comutador :**
+
+$$[A, B] \neq 0$$
+$$AB - BA \neq 0$$
+
+
+##### Propriedades
+
+Seja $A$, $B$  e $C$ matrizes. Sempre que os produtos e somas existirem, definimos :
+
+1. $(AB)C = A(BC)$     ->     associatividade
+2. $A(B+C)=AB+AC$     ->     distributividade
+3. $(A+B)C = AC+BC$     ->     distributividade
+4. $k.(AB) = (k.A)B = A(k.B)$     ->     $k$ é escalar
