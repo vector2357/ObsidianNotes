@@ -294,3 +294,41 @@ Seja $A$, $B$  e $C$ matrizes. Sempre que os produtos e somas existirem, definim
 2. $A(B+C)=AB+AC$     ->     distributividade
 3. $(A+B)C = AC+BC$     ->     distributividade
 4. $k.(AB) = (k.A)B = A(k.B)$     ->     $k$ é escalar
+
+
+#### Matriz Transposta
+
+
+Definição:  a transposta de uma matriz $A$, é a matriz obtida escrevendo as *colunas* de $A$ na mesma ordem, como *linhas* de $A$.
+
+$$A' = A^T$$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}
+= [a_{ij}]_{2\times2}$$
+$$A' =\begin{bmatrix}
+1 & 3 \\
+2 & 4
+\end{bmatrix}$$
+$$B=\begin{bmatrix}
+1 & 4 & 3
+\end{bmatrix}$$
+$$B' = \begin{bmatrix}
+1 \\
+4 \\
+3
+\end{bmatrix}$$
+
+
+##### Propriedades
+
+Sejam $A$ e $B$ matrizes e $k$ um escalar, sempre que os produtos e somas envolvidos existirem, definimos :
+
+1. $(A+B)' = A' + B'$
+2. $(A')' = A$
+3. $(k.A)' = k.A'$
+4. $(AB)' = B'A'$
