@@ -232,3 +232,22 @@ Então, podemos concluir :
 
 $$(\log_2 N) + 1 \; \times \; \Theta(N)$$
 $$\Theta(N\times\log_2 N)$$
+
+
+### Árvores
+
+
+Árvores é um [[Tipo Abstrato de Dados - TAD]] , que é basicamente um conjunto de <span style="color:rgb(146, 208, 80)">Nós</span>, os nós são conectados por <span style="color:rgb(255, 255, 0)">Arestas</span>. Cada nó contém um valor ou dados e pode não ter um nó filho.
+
+O primeiro **nó** da árvore é chamado de <span style="color:rgb(0, 176, 240)">Raiz</span>. Se este nó raiz é conectado por outro nó, a raiz é então um **nó pai** e o nó conectado é um **nó filho**.
+
+As <span style="color:rgb(146, 208, 80)">Folhas</span> são os últimos nós de uma árvore. Elas são os nós **sem filhos**. Como árvores reais, temos a raiz, os ramos e, finalmente, as folhas.
+
+Outros conceitos importantes a serem entendidos são **Altura** e **Profundidade**.
+A <span style="color:rgb(255, 255, 0)">Altura</span> de uma **árvore** é o tamanho do caminho **mais longo** até uma **folha**.
+A <span style="color:rgb(0, 176, 240)">Profundidade</span> de um **nó** é o tamanho do caminho percorrido do nó até a **raiz**.
+
+**Árvores** são representadas normalmente desta forma :
+
+
+![[Pasted image 20250303164558.png]]
