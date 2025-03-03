@@ -251,3 +251,24 @@ A <span style="color:rgb(0, 176, 240)">Profundidade</span> de um **nó** é o ta
 
 
 ![[Pasted image 20250303164558.png]]
+
+
+### Árvores Binárias
+
+
+Uma árvore binária é uma estrutura de dados em árvore na qual cada nó tem, no máximo, dois filhos, que são referidos como o **filho da esquerda** e o **filho da direita**.
+
+Introduziremos o conceito de Árvore Binária a partir do entendimento de uma **Heap** e também com a implementação de uma HeapSort.
+
+Heap é uma estrutura de dados especializada, baseada em árvore, de maneira estática (implementada em vetor), que satisfaz as propriedade de uma heap :
+
+- <span style="color:rgb(146, 208, 80)">Max Heap</span>
+
+  Se P é um nó pai de C, então a chave (valor) de P é **MAIOR** ou igual a chave de C.
+
+- <span style="color:rgb(146, 208, 80)">Min Heap</span>
+
+  Se P é um nó pai de C, então a chave (valor) de P é **MENOR** ou igual a chave de C.
+
+
+O método de ordenação **HeapSort** se utiliza do conceito de **Max Heap**. Aqui é possível encontrar a implementação e análise do [[Heap Sort]].
