@@ -151,3 +151,84 @@ Podemos considerar então que a função $g(n) = n^2$ é assintótica à $T(n)$ 
 Podemos então definir a complexidade desse algoritmo no **pior caso**, <span style="color:rgb(146, 208, 80)">na notação Theta</span> $(\Theta)$, como sendo: 
 
 $$\Theta(n^2)$$
+
+
+#### Análise Merge Sort
+
+O algoritmo de Mergesort usa a estratégia de [[Divide and Conquer]] para ordenar um dado vetor.
+
+Nele, ordenamos o vetor de forma que dividimos ao meio toda vez até que se sobre apenas um elemento. Quando possui 1 elemento, o vetor pode ser considerado ordenado, dessa forma a única coisa que precisamos fazer com 2 lados do vetor ordenados, é mesclar de forma ordenada ambas as partes.
+
+Faremos isso a partir de uma [[Recursão]] :
+
+- <span style="color:rgb(146, 208, 80)">Base :</span>
+  Caso o início não seja maior ou igual ao fim, ou seja, o vetor tendo apenas 1 elemento, ele estará ordenado. `if(i >= f) return;`
+
+- <span style="color:rgb(146, 208, 80)">Hipótese :</span>
+  Vamos assumir que conseguimos ordenar o vetor de tamanho $n/2$ dividindo ele em duas partes e ordenando cada metade.
+
+- <span style="color:rgb(146, 208, 80)">Indução :</span>
+  Se conseguimos ordenar metade do vetor, também conseguimos ordenar o vetor inteiro, mesclando-o.
+
+
+Com essas definições para a recursão, podemos então implementar o algoritmo de ordenação por mesclagem :
+
+
+```cpp
+void Merge(int *V, int ini, int m, int fim) {
+    int tam = fim-ini+1, i, j, k;
+    int A[tam];
+
+    for(i=ini, j=m+1, k=0; i<=m && j<=fim; k++) {
+        if(V[i] <= V[j]) {
+            A[k] = V[i];
+            i++;
+        }
+        else {
+            A[k] = V[j];
+            j++;
+        }
+    }
+  
+    for(; i<=m; i++, k++) {
+        A[k] = V[i];
+    }
+  
+    for(; j<=fim; j++, k++) {
+        A[k] = V[j];
+    }
+  
+    for(i=0, j=ini; i<tam; i++, j++) {
+        V[j] = A[i];
+    }
+}
+
+void MergeSort(int *V, int i, int f) {
+    if(i < f) {
+        int m = (i+f)/2;
+        MergeSort(V, i, m);
+        MergeSort(V, m+1, f);
+        Merge(V, i, m, f);
+    }
+}
+```
+
+
+**Função de Recorrência**
+
+$$f(n)\quad \left\{\begin{array}{l}
+\;\Theta(1)\quad \quad \quad \quad \quad \quad \quad \quad n\leq1 \\
+\;2\times f(n/2) + \Theta(n)\quad \quad n>1
+\end{array}\right.$$
+
+
+Para descobrirmos a complexidade do algoritmo Mergesort, podemos calcular a partir da função de recorrência. Dessa forma :
+
+$$f(2) = 2.\Theta(1)\; + \; \Theta(2)\; =\; 2.\Theta(2)$$
+$$f(4) = 2.\Theta(4)\; + \; \Theta(4)\; = \; 3.\Theta(4)$$
+$$f(8) = 2.\Theta(12) \; + \; \Theta(8) \; = \; 4.\Theta(8)$$
+
+Então, podemos concluir :
+
+$$(\log_2 N) + 1 \; \times \; \Theta(N)$$
+$$\Theta(N\times\log_2 N)$$
