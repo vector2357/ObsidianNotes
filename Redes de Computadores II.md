@@ -72,6 +72,22 @@ O **modelo TCP/IP** é o padrão **prático** utilizado na Internet e possui **q
 | Desenvolvido por  | ISO                       | Departamento de Defesa dos EUA |
 
 
-### Fluxo de Transmissão de Dados
+### Modos de Transmissão de Dados
 
 
+Os modos de transmissão de dados são basicamente o sentido pelo qual os dados poderão ser transmitidos em uma conexão.
+
+1. <span style="color:rgb(146, 208, 80)">Simplex</span> 
+
+   É o modo de transmissão em sentido único ou unidirecional, caracteriza-se em uma ligação na qual os dados circulam num só um sentido, ou seja do emissor para o receptor.  
+   Exemplo: Rádio, TV.
+
+2. <span style="color:rgb(146, 208, 80)">Half-Duplex</span> 
+
+   É o modo de transmissão em sentido duplo em função do tempo, não simultâneo. Assim, com este tipo de ligação, cada extremidade da ligação emite por sua vez.  
+   Exemplo: Nextel.
+
+3. <span style="color:rgb(146, 208, 80)">Full-Duplex</span>
+
+   É o modo de transmissão em sentido duplo ou bidirecional simultâneo. Assim, cada extremidade da linha pode emitir e receber ao mesmo tempo, o que significa que a banda concorrida está dividida por dois para cada sentido de emissão dos dados.  
+   Exemplo: Celular.
