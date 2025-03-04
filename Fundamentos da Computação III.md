@@ -299,7 +299,7 @@ Seja $A$, $B$  e $C$ matrizes. Sempre que os produtos e somas existirem, definim
 #### Matriz Transposta
 
 
-Definição:  a transposta de uma matriz $A$, é a matriz obtida escrevendo as *colunas* de $A$ na mesma ordem, como *linhas* de $A$.
+<span style="color:rgb(146, 208, 80)">Definição:</span>  a transposta de uma matriz $A$, é a matriz obtida escrevendo as *colunas* de $A$ na mesma ordem, como *linhas* de $A$.
 
 $$A' = A^T$$
 
@@ -332,3 +332,33 @@ Sejam $A$ e $B$ matrizes e $k$ um escalar, sempre que os produtos e somas envolv
 2. $(A')' = A$
 3. $(k.A)' = k.A'$
 4. $(AB)' = B'A'$
+
+
+#### Matriz Hermitiana
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  matriz **hermitiana** ou **auto-adjunta** é uma matriz quadrada complexa que é igual à sua própria **transposta conjugada** - ou seja, o elemento na posição  $a_{ij}$  de uma matriz $A$ é igual ao **conjugado complexo** do elemento na posição  $a_{ji}$  da matriz $A$, para todos os índices $i$ e $j$.
+
+>**Exemplo**
+
+$$A=\begin{bmatrix}
+2 & 2+i & 4 \\
+2-i & 3 & i \\
+4 & -i & 1
+\end{bmatrix}$$
+$$A^T=\begin{bmatrix}
+2 & 2-i & 4 \\
+2+i & 3 & -i \\
+4 & i & 1
+\end{bmatrix}$$
+$$(A^T)^*=\begin{bmatrix}
+2 & 2+i & 4 \\
+2-i & 3 & i \\
+4 & -i & 1
+\end{bmatrix}$$
+Então,
+$$A=(A^T)^*$$
+$$A=A^H$$
+
+
+><span style="color:rgb(255, 255, 0)">Conjugado Complexo</span> - em matemática, o conjugado de um número complexo $(z=a+bi)$ é representado por $(z=a-bi)$ , ou seja, trocamos o sinal de todas as variáveis complexas.

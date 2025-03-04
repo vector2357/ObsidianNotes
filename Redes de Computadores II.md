@@ -45,8 +45,9 @@ O **modelo TCP/IP** é o padrão **prático** utilizado na Internet e possui **q
 
 1. <span style="color:rgb(146, 208, 80)">ACESSO À REDE</span> 
 
-   Equivalente às camadas Física e Enlace do OSI. Cuida do hardware e protocolos de comunicação.
-
+   Equivalente às camadas Física e Enlace do OSI. Cuida do hardware e protocolos de comunicação. Exemplos de Protocolos: 
+   **IEEE 802.3 - CSMA/CD (Carrier Sense Multiple Access/Colision Detection) - Ethernet**
+   **IEEE 802.11 - CSMA/CA (Carrier Sense Multiple Access/Colision Avoidance) - WiFi**   
 2. <span style="color:rgb(146, 208, 80)">INTERNET</span> 
 
    Responsável pelo **roteamento** e **endereçamento** (usa o protocolo **IP**).
@@ -89,5 +90,5 @@ Os modos de transmissão de dados são basicamente o sentido pelo qual os dados 
 
 3. <span style="color:rgb(146, 208, 80)">Full-Duplex</span>
 
-   É o modo de transmissão em sentido duplo ou bidirecional simultâneo. Assim, cada extremidade da linha pode emitir e receber ao mesmo tempo, o que significa que a banda concorrida está dividida por dois para cada sentido de emissão dos dados.  
+   É o modo de transmissão em sentido duplo ou bidirecional simultâneo. Assim,  cada extremidade da linha pode emitir e receber ao mesmo tempo, o que significa que a banda concorrida está dividida por dois para cada sentido de emissão dos dados.  
    Exemplo: Celular.
