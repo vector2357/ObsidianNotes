@@ -10,31 +10,31 @@ Os **modelos em redes de computadores** são estruturas conceituais que descreve
 
 O **modelo OSI** foi desenvolvido pela **ISO (International Organization for Standardization)** e é um modelo **teórico** que define **sete camadas** para a comunicação em redes:
 
-1. <span style="color:rgb(146, 208, 80)">FÍSICA</span>
+1. <span style="color:rgb(255, 255, 0)">FÍSICA</span>
 
    Define aspectos elétricos e físicos do hardware (cabos, conectores, sinais).
 
-2. <span style="color:rgb(146, 208, 80)">ENLACE DE DADOS</span> 
+2. <span style="color:rgb(255, 255, 0)">ENLACE DE DADOS</span> 
 
    Garante que os dados sejam transmitidos sem erros entre os dispositivos conectados diretamente.
 
-3. <span style="color:rgb(146, 208, 80)">REDE</span> 
+3. <span style="color:rgb(255, 255, 0)">REDE</span> 
 
    Define roteamento e endereçamento como por exemplo no caso do **IP**.
 
-4. <span style="color:rgb(146, 208, 80)">TRANSPORTE</span> 
+4. <span style="color:rgb(255, 255, 0)">TRANSPORTE</span> 
 
    Garante entrega confiável e ordenada como no caso do **TCP**.
 
-5. <span style="color:rgb(146, 208, 80)">SESSÃO</span> 
+5. <span style="color:rgb(255, 255, 0)">SESSÃO</span> 
 
    Gerencia conexões entre aplicações.
 
-6. <span style="color:rgb(146, 208, 80)">APRESENTAÇÃO</span> 
+6. <span style="color:rgb(255, 255, 0)">APRESENTAÇÃO</span> 
 
    Cuida da formatação e criptografia dos dados.
 
-7. <span style="color:rgb(146, 208, 80)">APLICAÇÃO</span> 
+7. <span style="color:rgb(255, 255, 0)">APLICAÇÃO</span> 
 
    Interação com o usuário como por exemplo protocolos como: **HTTP, FTP**.
 

@@ -272,3 +272,31 @@ Heap é uma estrutura de dados especializada, baseada em árvore, de maneira est
 
 
 O método de ordenação **HeapSort** se utiliza do conceito de **Max Heap**. Aqui é possível encontrar a implementação e análise do [[Heap Sort]].
+
+#### Árvores de Busca Binária
+
+Árvores de Busca Binária (<span style="color:rgb(146, 208, 80)">Binary Search Tree - BST</span>), são árvores binárias, ou seja, cada nó tem no **máximo** 2 filhos, que é utilizada para efetuar buscas eficazes, de tal maneira que a busca é feita por alguma chave de um certo tipo específico.
+
+Desta forma, cada nó da árvore possui um valor chave, outros dados à serem buscado, e uma referência para seus possíveis 2 filhos.
+
+
+```cpp
+struct Node {
+	int key;
+	Thing regs;
+	Node *left;
+	Node *right;
+}
+```
+
+A regra a ser respeitada em uma BST, é que, além de cada nó possuir no máximo 2 filhos, a chave do **nó pai P** sempre será **maior ou igual** à chave de cada nó da subárvore esquerda de P e **menor ou igual** à chave de cada nó da subárvore direita de P.
+
+Dessa forma podemos ter :
+
+
+![[Pasted image 20250303223215.png]]
+
+
+Árvores de busca binária são muito eficientes visto que qualquer operação (inserção, remoção, busca, percurso), tem complexidade no melhor caso de  $\Theta(\log_2 N)$ , isso ocorre devido à altura de uma árvore que será no melhor caso $\log_2 N$.
+
+Porém, no pior caso, as operações de uma árvore pode ter  $\Theta(N)$ , tornando-se uma [[Lista]]. Para resolver isso, é importante que a árvore de busca binária esteja balanceada; veremos isso no futuro.
