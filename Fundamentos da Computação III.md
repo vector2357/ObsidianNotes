@@ -362,3 +362,21 @@ $$A=A^H$$
 
 
 ><span style="color:rgb(255, 255, 0)">Conjugado Complexo</span> - em matemática, o conjugado de um número complexo $(z=a+bi)$ é representado por $(z=a-bi)$ , ou seja, trocamos o sinal de todas as variáveis complexas.
+
+
+#### Traço
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  na álgebra linear, o traço de uma matriz **quadrada** é a função matricial que associa à soma dos elementos da sua diagonal principal. Ou seja :
+
+$$tr(A) = \sum_{i=1}^na_{ii}$$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+-1 & 0 & 2 \\
+4 & 5 & -2 \\
+8 & 9 & 3
+\end{bmatrix}$$
+$$tr(A) = (-1)+5+3$$
+$$tr(A)=7$$
