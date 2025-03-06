@@ -380,3 +380,78 @@ $$A=\begin{bmatrix}
 \end{bmatrix}$$
 $$tr(A) = (-1)+5+3$$
 $$tr(A)=7$$
+
+
+#### Matriz Normal
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  a matriz normal de <span style="color:rgb(255, 255, 0)">números complexos</span>, é uma matriz que comuta com a **transposta conjugada** dela mesma. Ou seja :
+
+$$A.(A^T)^* = (A^T)^*.A$$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+i & i \\
+i & -i
+\end{bmatrix}$$
+$$A.(A^T)^*=\begin{bmatrix}
+i & i \\
+i & -i
+\end{bmatrix}
+\;.\;\begin{bmatrix}
+-i & -i \\
+-i & i
+\end{bmatrix}
+\;=\;\begin{bmatrix}
+2 & 0 \\
+0 & 2
+\end{bmatrix}$$
+$$(A^T)^*.A=\begin{bmatrix}
+-i & -i \\
+-i & i
+\end{bmatrix}
+\;.\;\begin{bmatrix}
+i & i \\
+i & -i
+\end{bmatrix}
+\;=\;\begin{bmatrix}
+2 & 0 \\
+0 & 2
+\end{bmatrix}$$
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  a matriz normal de <span style="color:rgb(255, 255, 0)">números reais</span>, é uma matriz que comuta com a sua própria **transposta**. Ou seja :
+
+$$A.A^T = A^T.A$$
+
+> **Exemplo**
+
+$$B=\begin{bmatrix}
+2 & -2 \\
+2 & 2
+\end{bmatrix}$$
+$$B.B^T=\begin{bmatrix}
+2 & -2 \\
+2 & 2
+\end{bmatrix}
+\;.\;\begin{bmatrix}
+2 & 2 \\
+-2 & 2
+\end{bmatrix}
+\;=\;\begin{bmatrix}
+8 & 0 \\
+0 & 8
+\end{bmatrix}$$
+$$B^T.B=\begin{bmatrix}
+2 & 2 \\
+-2 & 2
+\end{bmatrix}
+\;.\;\begin{bmatrix}
+2 & -2 \\
+2 & 2
+\end{bmatrix}
+\;=\;\begin{bmatrix}
+8 & 0 \\
+0 & 8
+\end{bmatrix}$$
