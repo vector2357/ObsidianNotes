@@ -92,3 +92,30 @@ Os modos de transmissão de dados são basicamente o sentido pelo qual os dados 
 
    É o modo de transmissão em sentido duplo ou bidirecional simultâneo. Assim,  cada extremidade da linha pode emitir e receber ao mesmo tempo, o que significa que a banda concorrida está dividida por dois para cada sentido de emissão dos dados.  
    Exemplo: Celular.
+
+
+### Cisco Packet Tracer
+
+
+Cisco Packet Tracer é um software de simulação de redes de computadores de modo virtual. Usaremos ele para entender vários conceitos, estruturas e configurações de Redes de Computadores na prática.
+
+#### Dispositivos de Redes
+
+As redes de computadores utilizam dispositivos de rede para interligar máquinas e permitir a comunicação eficiente entre elas. Entre os principais dispositivos, temos roteadores, switches, hubs e access points.
+
+1. <span style="color:rgb(0, 176, 240)">Roteador (Router)</span>
+
+   Um **roteador** é um dispositivo responsável por conectar redes diferentes e direcionar o tráfego de dados entre elas. Ele opera na **Camada 3 (Rede) do modelo OSI**, utilizando endereços **IP** para encaminhar pacotes de dados.
+
+   - ***Para que serve?***
+
+     - Conectar redes locais (**LANs**) à Internet.
+     - Direcionar pacotes de dados entre redes distintas.
+     - Criar **redes domésticas e empresariais**, distribuindo o acesso à Internet.
+     - Aplicar **segurança**, como firewall e filtragem de pacotes.
+
+- ***Como funciona?***
+
+     - O roteador recebe pacotes de dados e examina seu **endereço IP de destino**.
+     - Com base em sua **tabela de roteamento**, decide para onde enviar o pacote.
+     - Encaminha os pacotes para a rede correta, garantindo que os dados cheguem ao destino certo.

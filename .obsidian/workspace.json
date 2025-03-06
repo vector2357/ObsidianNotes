@@ -81,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -225,10 +225,10 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c1267f32c31c3c48",
+  "active": "32ab838e4eda2dc8",
   "lastOpenFiles": [
-    "Redes de Computadores II.md",
     "Fundamentos da Computação III.md",
+    "Redes de Computadores II.md",
     "Estrutura de Dados II.md",
     "JDBC (canvas).canvas",
     "Arquitetura de Computadores II.md",
