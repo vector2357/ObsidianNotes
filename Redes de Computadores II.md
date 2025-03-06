@@ -114,8 +114,59 @@ As redes de computadores utilizam dispositivos de rede para interligar máquinas
      - Criar **redes domésticas e empresariais**, distribuindo o acesso à Internet.
      - Aplicar **segurança**, como firewall e filtragem de pacotes.
 
-- ***Como funciona?***
+   - ***Como funciona?***
 
      - O roteador recebe pacotes de dados e examina seu **endereço IP de destino**.
      - Com base em sua **tabela de roteamento**, decide para onde enviar o pacote.
      - Encaminha os pacotes para a rede correta, garantindo que os dados cheguem ao destino certo.
+
+
+2. <span style="color:rgb(0, 176, 240)">Switch</span> 
+
+   Um **switch** é um dispositivo que interconecta dispositivos dentro de uma mesma **rede local (LAN)**, operando na **Camada 2 (Enlace) do modelo OSI**. Ele usa **endereços MAC** para encaminhar os dados divididos em pacotes, processo chamado de **comutação**. Portanto, o switch também é conhecido como **comutador**.
+
+   - ***Para que serve?***
+
+     - Criar redes locais eficientes.
+     - Reduzir congestionamento na rede, pois envia dados apenas ao destinatário correto.
+     - Melhorar a segurança e a velocidade da comunicação entre dispositivos.
+
+   - ***Como funciona?***
+
+     - Quando um dispositivo envia um quadro de dados, o switch lê o **endereço MAC de destino**.
+     - Ele verifica em sua **tabela de endereços MAC** para saber qual porta usar para encaminhar o dado.
+     - Envia o pacote diretamente para o dispositivo correto, sem interferir nos outros.
+
+
+3. <span style="color:rgb(0, 176, 240)">Hub</span> 
+
+   Um **hub** é um dispositivo que conecta vários computadores dentro de uma rede local, mas ao contrário do switch, ele **não gerencia o tráfego de dados**. Ele funciona na **Camada 1 (Física) do modelo OSI**.
+
+   - ***Para que serve?***
+
+     - Conectar vários dispositivos dentro de uma LAN.
+     - Permitir que máquinas se comuniquem entre si.
+     - Usado em redes simples, mas menos eficiente que o switch.
+
+   - ***Como funciona?***
+
+     - Quando um computador envia um pacote de dados, o hub **replica essa informação para todos os dispositivos conectados**.
+     - Apenas o destinatário correto aceita o pacote, mas todos os outros recebem a mesma informação.
+     - Isso gera **tráfego desnecessário**, podendo diminuir a eficiência da rede.
+
+
+4. <span style="color:rgb(0, 176, 240)">Access Point (AP)</span> 
+
+   Um **Access Point (AP)** é um dispositivo que permite que dispositivos **se conectem a uma rede sem fio (Wi-Fi)**. Ele funciona na **Camada 2 (Enlace) do modelo OSI**.
+
+   - ***Para que serve?***
+
+     - Criar uma rede Wi-Fi para conectar dispositivos sem fio.
+     - Expandir o alcance de uma rede sem fio existente.
+     - Melhorar a cobertura e reduzir pontos cegos em redes Wi-Fi.
+
+   - ***Como funciona?***
+
+     - O **Access Point** está conectado via cabo a um roteador ou switch.
+     - Ele emite um **sinal Wi-Fi**, permitindo que dispositivos móveis se conectem sem fio.
+     - Atua como uma **ponte** entre os dispositivos Wi-Fi e a rede cabeada.
