@@ -94,6 +94,78 @@ Os modos de transmissão de dados são basicamente o sentido pelo qual os dados 
    Exemplo: Celular.
 
 
+### Endereçamento IP (v4)
+
+
+O endereçamento IP é um sistema de identificação e localização de dispositivos conectados a uma rede de computadores. Ele é baseado no protocolo de internet (IP), que é um conjunto de regras que define o formato de dados enviados pela internet.
+
+O endereço IP é dado por um valor binário de <span style="color:rgb(255, 255, 0)">32 bits</span> e representado visualmente por 4 **valores decimais** de <span style="color:rgb(255, 255, 0)">1 byte</span> (**ou octeto**) cada e separados por **ponto**.
+
+> **Exemplo**
+
+$$192.168.0.1$$
+
+O endereço IP é acompanhado sempre por uma <span style="color:rgb(146, 208, 80)">Máscara de Rede</span>, que representa quais bits do endereço são de **Redes** e quais são de **Hosts**, no qual os bits mais significativos (à esquerda) são dados por **bits 1** e representam os bits reservados para Redes, enquanto **bits 0** (à direita) representam os bits do endereço reservado para Hosts.
+
+Vale destacar que endereços Hosts apenas com <span style="color:rgb(192, 0, 0)">bits 0</span> não são válidos, uma vez que são utilizados apenas como identificador de Rede. Hosts apenas com <span style="color:rgb(146, 208, 80)">bits 1</span> também não são válidos, umas vez que são utilizados como propagação **Broadcast**.
+
+Existem 4 classes de IP que definem os limites de endereçamento e as máscaras associadas aos endereço. São elas :
+
+-- -
+#### <span style="color:rgb(146, 208, 80)">Classe A</span> :
+
+Máscara de Rede Classe A:
+
+	255.0.0.0
+	
+	REDE.HOST.HOST.HOST
+
+**Endereço IP:**  na classe A, endereços IP têm por padrão o primeiro bit **zerado**. Dessa forma, o intervalo válido de redes classe A é:
+
+	1.x.x.x
+	
+	...
+	
+	126.x.x.x
+
+
+> **Observação :**  o endereço IP `127.x.x.x` é um endereço reservado para <span style="color:rgb(255, 255, 0)">LOOPBACK</span>,   que é usado para testar conectividade de rede em um dispositivo, sem a necessidade de uma conexão externa. Também conhecido como <span style="color:rgb(146, 208, 80)">LOCALHOST</span>.
+
+
+- ***Rede Privada***
+
+  `10.x.x.x`
+
+-- -
+#### <span style="color:rgb(146, 208, 80)">Classe B</span> :
+
+Máscara de Rede Classe B:
+
+	255.255.0.0
+	
+	REDE.REDE.HOST.HOST
+
+**Endereço IP:**  na classe B, endereços IP têm por padrão o **primeiro bit 1 e o segundo bit 0**. Dessa forma, o intervalo válido de redes classe B é:
+
+	128.0.x.x
+	
+	...
+	
+	191.255.x.x
+
+
+- ***Rede privada***
+
+  `172.16.x.x`
+  `172.17.x.x`
+
+  `...`
+
+  `172.31.x.x`
+
+-- -
+
+
 ### Cisco Packet Tracer
 
 
