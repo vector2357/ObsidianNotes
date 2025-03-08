@@ -1,6 +1,6 @@
 -- -
 
-### Matrizes e Vetores
+### Matrizes
 
 
 >**<span style="color:rgb(255, 255, 0)">Introdução</span>**
@@ -532,3 +532,72 @@ Se $A$ e $B$ são matrizes  $n\times n$ , ambas inversíveis, então :
 
 
 <span style="color:rgb(255, 255, 0)">Teorema:</span>  seja  $A^{-1}$  uma matriz inversa de  $A$. Então, $A^{-1}$  é única.
+
+
+#### Operações Elementares
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  dada uma matriz  $A=[a_{ij}]_{n\times m}$ , podemos realizar as seguintes operações elementares :
+
+- Troca da ordem de uma linha :
+   $L_i\leftrightarrow L_j$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 3 & 2 \\
+0 & 4 & 4
+\end{bmatrix}$$
+$$L_1\leftrightarrow L_2$$
+$$A=\begin{bmatrix}
+0 & 4 & 4 \\
+1 & 3 & 2
+\end{bmatrix}$$
+
+
+- Multiplicar uma linha por um escalar **não nulo** :
+   $L_i\leftarrow k.L_j$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 3 & 2 \\
+0 & 4 & 4
+\end{bmatrix}$$
+$$L_1\leftarrow 3\times L_1$$
+$$A=\begin{bmatrix}
+3 & 9 & 6 \\
+0 & 4 & 4
+\end{bmatrix}$$
+
+
+-  Subtrair uma linha a outra :
+   $L_i\leftarrow L_i-L_j$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 3 & 2 \\
+0 & 4 & 4
+\end{bmatrix}$$
+$$L_1\leftarrow L_1-L_2$$
+$$A=\begin{bmatrix}
+1 & -1 & -2 \\
+0 & 4 & 4
+\end{bmatrix}$$
+
+
+- Combinação do item <span style="color:rgb(146, 208, 80)">(2)</span> e <span style="color:rgb(146, 208, 80)">(3)</span> :
+   $L_i\leftarrow L_i-k.L_j$
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 3 & 2 \\
+0 & 4 & 4
+\end{bmatrix}$$
+$$L_2\leftarrow L_2-2\times L_1$$
+$$A=\begin{bmatrix}
+1 & 3 & 2 \\
+-2 & -2 & 0
+\end{bmatrix}$$
