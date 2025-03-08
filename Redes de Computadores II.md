@@ -165,6 +165,49 @@ Máscara de Rede Classe B:
 
 -- -
 
+#### <span style="color:rgb(146, 208, 80)">Classe C</span> :
+
+Máscara de Rede Classe C:
+
+	255.255.255.0
+	
+	REDE.REDE.REDE.HOST
+
+**Endereço IP:**  na classe C, endereços IP têm por padrão os **dois primeiros bits, 1**. Dessa forma, o intervalo válido de redes classe C é:
+
+	192.0.0.x
+	
+	...
+	
+	223.255.255.x
+
+
+- ***Rede privada***
+
+  `192.168.0.x`
+  `192.168.0.x`
+
+  `...`
+
+  `192.168.255.x`
+
+-- -
+
+#### <span style="color:rgb(146, 208, 80)">Classe D</span> :
+
+A classe D foi criada com o intuito de enviar pacotes por propagação Multicast.
+
+>***Multicast***:  é uma técnica de comunicação em redes de computadores que permite enviar uma mensagem para vários destinatários de uma só vez. É uma forma de distribuição de tráfego de rede, também conhecida como rede multicast.
+
+**Endereço IP:**  os endereços IP da classe D têm os quatro bits mais significativos em 1-1-1-0. Dessa forma, o intervalo válido de redes classe D é:
+
+	224.0.0.0
+	
+	...
+	
+	239.255.255.255
+
+-- -
 
 ### Cisco Packet Tracer
 
