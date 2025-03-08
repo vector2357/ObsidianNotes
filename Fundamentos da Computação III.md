@@ -455,3 +455,80 @@ $$B^T.B=\begin{bmatrix}
 8 & 0 \\
 0 & 8
 \end{bmatrix}$$
+
+
+#### Matriz Inversa
+
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  uma matriz  $A=[a_{ij}]_{n\times n}$  é chamada matriz inversa (não singular) se existe uma matriz  $X=[x_{ij}]_{n\times n}$ , que satisfaz as duas equações:
+
+$$AX=I$$
+$$XA=I$$
+
+onde $X$ é a matriz inversa de $A$.
+
+$$A.A^{-1}=I$$
+
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+2 & 3 \\
+1 & 4
+\end{bmatrix}$$
+
+Determine $A^{-1}$.
+
+$$A^{-1}=\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+\qquad A.A^{-1}=I$$
+$$\begin{bmatrix}
+2 & 3 \\
+1 & 4
+\end{bmatrix}
+\begin{bmatrix}
+a & b \\
+c & d
+\end{bmatrix}
+=\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}$$
+$$\begin{bmatrix}
+2a+3c & 2b+3d \\
+a+4c & b+4d
+\end{bmatrix}
+=\begin{bmatrix}
+1 & 0 \\
+0 & 1
+\end{bmatrix}$$
+
+
+$$\left\{\begin{array}{l}
+\;2a+3c=1 \\
+\;a+4c=0
+\end{array}\right.$$
+$$\left\{\begin{array}{l}
+\;2b+3d=0 \\
+\;b+4d=1
+\end{array}\right.$$
+
+$$A^{-1}=\begin{bmatrix}
+\frac{4}{5} & \frac{3}{5} \\
+-\frac{1}{5} & -\frac{2}{5}
+\end{bmatrix}$$
+
+##### Propriedades
+
+Se $A$ e $B$ são matrizes  $n\times n$ , ambas inversíveis, então :
+
+1. $(AB)^{-1}=B^{-1}A^{-1}$
+2. $Se\quad BA=I,\quad logo\quad B=A^{-1}$
+3. $Se\quad AB\neq I,\quad B\;\;é\;\;uma\;\;matriz\;\;singular$
+4. $Se\;\;A\;\; é\;\;inversa\;\;de\;\;B,\;\;Logo$
+   $[A,B]=0$
+
+
+<span style="color:rgb(255, 255, 0)">Teorema:</span>  seja  $A^{-1}$  uma matriz inversa de  $A$. Então, $A^{-1}$  é única.

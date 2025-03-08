@@ -81,7 +81,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -225,12 +225,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "32ab838e4eda2dc8",
+  "active": "c1267f32c31c3c48",
   "lastOpenFiles": [
-    "Fundamentos da Computação III.md",
-    "Arquitetura de Computadores II.md",
     "Estrutura de Dados II.md",
+    "Fundamentos da Computação III.md",
     "Redes de Computadores II.md",
+    "Arquitetura de Computadores II.md",
     "JDBC (canvas).canvas",
     "Images/Pasted image 20250303223215.png",
     "Heap Sort.md",
