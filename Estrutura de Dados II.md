@@ -273,6 +273,21 @@ Heap é uma estrutura de dados especializada, baseada em árvore, de maneira est
 
 O método de ordenação **HeapSort** se utiliza do conceito de **Max Heap**. Aqui é possível encontrar a implementação e análise do [[Heap Sort]].
 
+##### Cálculo Número de Elementos Max Árvore grau K
+
+Seja $K$ o **grau da árvore** (número de filhos máximos por nó), e  $h$  a profundidade da árvore, temos :
+
+$$\frac{K^{h+1}-1}{K-1}$$
+
+Ou seja, em uma árvore binária, o número máximo de elementos existentes até uma profundidade 4, por exemplo, seria de :
+
+$$\frac{2^{4+1}-1}{2-1}\;=\;31$$
+
+A complexidade de uma árvore genérica de grau $K$ é dado por :
+
+$$\Theta(log_k\;N)$$
+
+
 #### Árvores de Busca Binária
 
 Árvores de Busca Binária (<span style="color:rgb(146, 208, 80)">Binary Search Tree - BST</span>), são árvores binárias, ou seja, cada nó tem no **máximo** 2 filhos, que é utilizada para efetuar buscas eficazes, de tal maneira que a busca é feita por alguma chave de um certo tipo específico.
@@ -300,3 +315,42 @@ Dessa forma podemos ter :
 Árvores de busca binária são muito eficientes visto que qualquer operação (inserção, remoção, busca, percurso), tem complexidade no melhor caso de  $\Theta(\log_2 N)$ , isso ocorre devido à altura de uma árvore que será no melhor caso $\log_2 N$.
 
 Porém, no pior caso, as operações de uma árvore pode ter  $\Theta(N)$ , tornando-se uma [[Lista]]. Para resolver isso, é importante que a árvore de busca binária esteja balanceada; veremos isso no futuro.
+
+##### Classe Node
+
+Uma árvore de busca binária é formada por vários Nós (ou Nodes). Cada Nó desse possui uma **chave**, o **objeto** pelo qual deseja-se buscar e dois [[Ponteiros]] que referenciam os **dois filhos** do Nó.
+
+Dessa forma, podemos representar a classe "Node" com os seguintes atributos :
+
+```cpp
+class Node
+{
+	int K;
+	Thing D;
+	Node* Left;
+	Node* Right;
+};
+```
+
+
+Uma vez tido os atributos da classe Node, devemos definir um construtor que inicie os valores de um Nó quando for criado.
+
+```cpp
+class Node
+{
+	int K;
+	Thing D;
+	Node* Left;
+	Node* Right;
+	
+	Node(int K, Thing D) {
+		this->K = K;
+		this->D = D;
+		this->Left = NULL;
+		this->Right = NULL;
+	}
+};
+```
+
+
+Dessa forma, toda vez que um novo Nó for criado, será atribuído os valores da chave e objeto e os filhos são inicializados com valor `NULL`.
