@@ -209,6 +209,25 @@ A classe D foi criada com o intuito de enviar pacotes por propagação Multicast
 
 -- -
 
+#### Sub-Redes e CIDR (Classless Inter-Domain Routing)
+
+
+**CIDR** é um método de alocação de endereços IP que permite especificar o tamanho de uma rede e alocar <span style="color:rgb(255, 255, 0)">sub-redes</span>.
+
+>**Sub-Redes:**  uma sub-rede é uma rede menor dentro de uma rede maior. Ela é uma técnica de segmentação que permite dividir uma rede de computadores em partes menores e isoladas.
+
+
+***Máscara de sub-rede***
+
+A máscara de sub-rede é um conjunto de 32 bits que separa um endereço IP em rede, sub-rede e host. Dessa forma, a sub-rede é representado por **bits 1** também assim como o endereço de rede, de tal forma que esteja entre 0 e 255. Exemplos :
+
+| Classe | Endereço | N. de Hosts | Netmask (Binary)                    | Netmask (Decimal) |
+| :----- | :------- | :---------- | ----------------------------------- | ----------------- |
+|        |          |             |                                     |                   |
+| CIDR   | /4       | 240,435,456 | 11110000 00000000 00000000 00000000 | 240.0.0.0         |
+| CIDR   | /9       | 8,388,608   | 11111111 10000000 00000000 00000000 | 255.128.0.0       |
+| CIDR   | /26      | 64          | 11111111 11111111 11111111 11000000 | 255.255.255.192   |
+
 ### Cisco Packet Tracer
 
 
