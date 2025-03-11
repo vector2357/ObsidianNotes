@@ -179,3 +179,38 @@ char x = *(nome + 4);   // nesse caso o nome seria nossa base
    <span style="color:rgb(146, 208, 80)">MAR:</span>  *Memory Address Register*  ->  <span style="color:rgb(112, 48, 160)">(Armazena Endereço de Dados/Instrução)</span>
 
    <span style="color:rgb(146, 208, 80)">MDR:</span>  *Memory Data Register*  ->  <span style="color:rgb(112, 48, 160)">(Armazena Dados)</span> 
+
+
+### Pipelining
+
+
+Pipelining é uma técnica de programação que divide tarefas sequenciais em estágios, permitindo a execução de várias operações simultaneamente.
+
+Dessa forma, uma vez que um ciclo de clock é completo e uma instrução passa para sua próxima etapa, é liberado os componentes para a etapa anterior, logo a próxima instrução iniciará enquanto isso.
+
+
+![[Pasted image 20250311152519.png]]
+
+#### Hazard
+
+Em processadores que utilizam **pipeline**, as instruções são executadas de forma sobreposta para melhorar o desempenho. No entanto, pode ocorrer um problema chamado **hazard**, que impede a execução correta ou eficiente das instruções.
+
+O hazard ocorre por conta de uma quebra na sequência de instruções por conta de instruções que são dependentes uma das outras de tal forma que uma precisa necessariamente que alguma etapa não concluída seja concluída antes.
+
+Uma possível solução para esse problema é inserir **"bolhas"** na execução: `NOP`
+Dessa forma poderá haver pausas entre ciclos.
+
+Algumas classificações de Hazard:
+
+
+- ***<span style="color:rgb(146, 208, 80)">Data Hazard (Hazard de Dados)</span>
+
+  Esse tipo de hazard ocorre quando uma instrução depende do resultado de uma instrução anterior que ainda **não foi concluída**. Isso acontece porque as instruções no pipeline são executadas de forma sobreposta.
+
+- ***<span style="color:rgb(146, 208, 80)">Control Hazard (Hazard de Controle)</span>
+
+  Esse tipo de hazard acontece quando o processador **não sabe qual instrução executar** porque uma decisão de fluxo de controle ainda não foi tomada (ex.: um desvio condicional).
+
+- <span style="color:rgb(146, 208, 80)">Structural Hazard (Hazard Estrutural)</span>
+
+  Esse hazard ocorre quando duas ou mais instruções tentam **usar o mesmo recurso do hardware ao mesmo tempo**.
