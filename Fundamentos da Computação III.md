@@ -601,3 +601,81 @@ $$A=\begin{bmatrix}
 1 & 3 & 2 \\
 -2 & -2 & 0
 \end{bmatrix}$$
+
+-- -
+
+### Sistemas Lineares
+
+
+> <span style="color:rgb(255, 255, 0)">Introdução</span> 
+
+   Um sistema de equações lineares com  $m$  equações e  $n$  incógnitas e um conjunto do tipo:
+
+$$\left\{\begin{array}{l}
+\;a_{11}.x_1\;+\;a_{12}.x_2\;+\;...\;+\;a_{1n}.x_n\;=\;b_1 \\
+\;a_{21}.x_1\;+\;a_{22}.x_2\;+\;...\;+\;a_{2n}.x_n\;=\;b_2 \\
+... \\
+... \\
+\;a_{m1}.x_1\;+\;a_{m2}.x_2\;+\;...\;+\;a_{mn}.x_n\;=\;b_m \\
+\end{array}\right.$$
+
+ou na forma matricial :
+
+$$\begin{bmatrix}
+a_{11} & a_{12} & .. & a_{1n} \\
+a_{21} & a_{22} & .. & a_{2n} \\
+.. & .. & & .. \\
+a_{m1} & a_{m2} & .. & a_{mn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+.. \\
+x_m
+\end{bmatrix}\;=\;
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+.. \\
+b_m
+\end{bmatrix}$$
+
+
+#### Matriz Ampliada
+
+A matriz ampliada é uma matriz que une as colunas de duas matrizes, sendo útil para resolver sistemas de equações lineares.
+
+$$M=
+\left[
+\begin{array}{ccc|c}
+a_{11} & .. & a_{1n} & b_1 \\
+.. &  & .. & .. \\
+a_{m1} & .. & a_{mn} & b_m
+\end{array}
+\right]
+$$
+
+Dessa forma, em sistemas lineares unimos as matrizes dos coeficientes das equações com a matriz dos resultantes.
+
+> **Exemplo**
+
+$$\left\{\begin{array}{l}
+\;x\;+\;3y\;=\;2 \\
+\;2x\;-\;y\;=\;4
+\end{array}\right.$$
+
+$$A=\begin{bmatrix}
+1 & 3 \\
+2 & -1
+\end{bmatrix}\,,
+\quad B=\begin{bmatrix}
+2 \\
+4
+\end{bmatrix}$$
+
+$$M=\left[
+\begin{array}{cc|c}
+1 & 3 & 2 \\
+2 & -1 & 4
+\end{array}
+\right]$$
