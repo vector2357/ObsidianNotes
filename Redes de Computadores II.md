@@ -228,6 +228,33 @@ A máscara de sub-rede é um conjunto de 32 bits que separa um endereço IP em 
 | CIDR   | /9       | 8,388,608   | 11111111 10000000 00000000 00000000 | 255.128.0.0       |
 | CIDR   | /26      | 64          | 11111111 11111111 11111111 11000000 | 255.255.255.192   |
 
+#### Tabela de Roteamento
+
+
+A **tabela de roteamento** é uma estrutura fundamental em **redes de computadores** que **direciona pacotes de dados** para seus destinos apropriados. Ela é usada por **roteadores e gateways** para **determinar o próximo salto** (next hop) no caminho até o destino final de um pacote.
+
+Cada entrada na tabela de roteamento contém várias informações para definir como os pacotes devem ser encaminhados. As principais colunas de uma tabela de roteamento incluem:
+
+
+| **Destino**      | **Máscara de Sub-rede** | **Gateway (Próximo Salto)** | **Interface de Saída** | **Métrica** |
+| ---------------- | ----------------------- | --------------------------- | ---------------------- | ----------- |
+| 192.168.1.0      | 255.255.255.0           | 0.0.0.0 (Rede Local)        | eth0                   | 1           |
+| 10.0.0.0         | 255.0.0.0               | 192.168.1.1                 | eth1                   | 5           |
+| 172.16.0.0       | 255.240.0.0             | 192.168.1.2                 | eth2                   | 3           |
+| 0.0.0.0 (Padrão) | 0.0.0.0                 | 192.168.1.254               | eth0                   | 10          |
+
+
+1. <span style="color:rgb(146, 208, 80)">Destino:</span>  A rede ou IP específico para onde os pacotes serão enviados.
+
+2. <span style="color:rgb(146, 208, 80)">Máscara de Sub-rede:</span>  Define o tamanho da rede de destino.
+
+3. <span style="color:rgb(146, 208, 80)">Gateway (Próximo Salto):</span>  Se o destino não estiver diretamente conectado, o pacote é enviado para este endereço intermediário.
+
+4. <span style="color:rgb(146, 208, 80)">Interface de Saída:</span>  A interface de rede pela qual o pacote será transmitido (ex.: `eth0`, `wlan0`).
+
+5. <span style="color:rgb(146, 208, 80)">Métrica:</span>  Indica o **custo da rota**; quanto menor, melhor. O sistema escolhe a **rota com menor métrica** caso existam múltiplos caminhos.
+
+
 ### Cisco Packet Tracer
 
 
