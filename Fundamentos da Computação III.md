@@ -679,3 +679,75 @@ $$M=\left[
 2 & -1 & 4
 \end{array}
 \right]$$
+
+
+#### Linha Equivalente
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  se $A$ e $B$ são matrizes $m\times n$ , dizemos que $B$ é linha equivalente de $A$, se $B$ for obtida de $A$ por um número **finito** de **operações elementares** sobre as linhas de $A$.
+
+Notação:
+
+$$A\sim B$$
+
+Assim, $B$ é **linha equivalente** de $A$.
+
+<span style="color:rgb(255, 255, 0)">Teorema:</span>  dois sistemas que possuem matrizes ampliadas equivalentes são equivalentes:
+
+$$A\sim B\;\rightarrow\;S_B\sim S_A \quad (sistemas)$$
+
+
+#### Forma Escada
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  uma matriz  $m\times n$  é linha reduzida à forma escada se :
+
+
+- O primeiro elemento **não nulo** de linha não nula é **1**.
+
+<span style="color:rgb(192, 0, 0)">Incorreto :</span>
+$$\begin{bmatrix}
+0 & 1 & 2 \\
+0 & 1 & 0 \\
+0 & 0 & 4
+\end{bmatrix}$$
+<span style="color:rgb(146, 208, 80)">Correto :</span>
+$$\begin{bmatrix}
+0 & 1 & 4 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}$$
+
+- Cada coluna que contém o primeiro elemento não nulo que alguma linha possui todas as outras posições da coluna iguais a zero.
+
+<span style="color:rgb(192, 0, 0)">Incorreto :</span>
+$$\begin{bmatrix}
+1 & 1 & 2 \\
+0 & 1 & 0 \\
+0 & 1 & 4
+\end{bmatrix}$$
+<span style="color:rgb(146, 208, 80)">Correto :</span>
+$$\begin{bmatrix}
+1 & 3 & 4 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}$$
+
+- Toda linha nula ocorre abaixo de todas as linhas não nulas.
+
+<span style="color:rgb(192, 0, 0)">Incorreto :</span>
+$$\begin{bmatrix}
+1 & 2 & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix}$$
+<span style="color:rgb(146, 208, 80)">Correto :</span>
+$$\begin{bmatrix}
+1 & 0 & 4 \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{bmatrix}$$
+
+<span style="color:rgb(255, 255, 0)">Teorema:</span>  toda matriz  $A_{m\times n}$  é linha equivalente a uma única matriz linha reduzida à forma escada.
+
+$$M_e \sim M$$
+
+Para a formação de uma forma escada é necessário o uso das **operações lineares**, dessa maneira é possível resolver muitos sistemas lineares.
