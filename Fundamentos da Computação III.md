@@ -751,3 +751,26 @@ $$\begin{bmatrix}
 $$M_e \sim M$$
 
 Para a formação de uma forma escada é necessário o uso das **operações lineares**, dessa maneira é possível resolver muitos sistemas lineares.
+
+
+#### Posto e Nulidade
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  dada a matriz  $A_{m\times n}$ , seja  $B_{m\times n}$  a **matriz linha reduzida à forma escada** Linha equivalente a $A$.
+O <span style="color:rgb(255, 255, 0)">posto</span> de $A$ , denotado por  $p$ , é o número de linhas **não nulas** de $B$ . A <span style="color:rgb(255, 255, 0)">nulidade</span> de $A$ é  $n-p$  ($n = colunas$).
+
+> **Exemplo**
+
+$$A=\begin{bmatrix}
+1 & 3 & 2 \\
+2 & -1 & 4
+\end{bmatrix}$$
+$$B=\begin{bmatrix}
+1 & 0 & 2 \\
+0 & 1 & 0
+\end{bmatrix}$$
+
+**Posto :**
+$$p=2\;\;\rightarrow\;\;L_1,\;L_2$$
+
+**Nulidade :**
+$$n-p=3-2\;=\;1$$
