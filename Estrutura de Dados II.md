@@ -379,3 +379,21 @@ BBTree::BBTree() {
 }
 ```
 
+
+A seguir serão implementados vários métodos utilizados em uma **árvore de busca binária**. Começaremos com métodos de **percurso em árvore**.
+
+##### Percurso
+
+O percurso em árvore refere-se a percorrer a BST de dada maneira. Existem 3 principais tipos de percurso em árvore de busca binária, sendo eles:
+
+	- InOrder   (left/root/right)
+	
+	- PreOrder  (root/left/right)
+	
+	- PosOrder  (left/right/root)
+
+
+Seguiremos com as implementações de cada um desses percursos.
+
+##### Método InOrder
+
