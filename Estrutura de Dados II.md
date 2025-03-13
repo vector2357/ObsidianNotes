@@ -323,8 +323,8 @@ Uma árvore de busca binária é formada por vários Nós (ou Nodes). Cada Nó d
 Dessa forma, podemos representar a classe "Node" com os seguintes atributos :
 
 ```cpp
-class Node
-{
+class Node {
+private:
 	int K;
 	Thing D;
 	Node* Left;
@@ -336,13 +336,14 @@ class Node
 Uma vez tido os atributos da classe Node, devemos definir um construtor que inicie os valores de um Nó quando for criado.
 
 ```cpp
-class Node
-{
+class Node {
+private:
 	int K;
 	Thing D;
 	Node* Left;
 	Node* Right;
 	
+public:
 	Node(int K, Thing D) {
 		this->K = K;
 		this->D = D;
@@ -354,3 +355,27 @@ class Node
 
 
 Dessa forma, toda vez que um novo Nó for criado, será atribuído os valores da chave e objeto e os filhos são inicializados com valor `NULL`.
+
+##### Classe BBTree
+
+Na classe principal que define a nossa árvore terá métodos de **inserção, busca, remoção, percurso**, entre outros. Quanto ao atributo, a árvore necessita da informação apenas da raiz (root) que é uma referência para um Node.
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	public: BBTree();
+};
+```
+
+
+Para a implementação do construtor padrão precisamos inicializar o Node raiz como `NULL`.
+
+```cpp
+BBTree::BBTree() {
+	Root = NULL;
+}
+```
+
