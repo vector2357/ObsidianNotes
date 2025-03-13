@@ -374,6 +374,8 @@ class BBTree {
 Para a implementação do construtor padrão precisamos inicializar o Node raiz como `NULL`.
 
 ```cpp
+// BBTREE.CPP \\
+
 BBTree::BBTree() {
 	Root = NULL;
 }
@@ -397,3 +399,95 @@ Seguiremos com as implementações de cada um desses percursos.
 
 ##### Método InOrder
 
+O percurso InOrder é dado de maneira ordenada na árvore de busca binária, de forma que o caminho percorrido segue da seguinte forma: `left/root/right`.
+
+Para percorrer, utilizaremos o conceito de [[Recursão]].
+
+- <span style="color:rgb(146, 208, 80)">Base :</span>
+  Se é `NULL`, faz nada.
+
+- <span style="color:rgb(146, 208, 80)">Hipótese :</span>
+  Suponha que eu saiba percorrer qualquer subárvore (esquerda e direita) se não for `NULL`.
+
+- <span style="color:rgb(146, 208, 80)">Indução :</span>
+  Se não for `NULL` percorre a subárvore esquerda, visita o nó pai e por fim, percorre a subárvore direita.
+
+
+Para a implementação, faremos 2 métodos: RInOrder e InOrder. Um ficará responsável pela implementação da Recursão, enquanto o outro fará a chamada iniciando da **raiz**.
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	public: BBTree();
+	private: static void RInOrder(Node* R);
+	public: void InOrder();
+};
+```
+
+```cpp
+// BBTREE.CPP \\
+
+void BBTree::RInOrder(Node* R) {
+	if(R) {
+		BBTree::RInOrder(R->Left);
+		cout << R->Key << " ";
+		BBTree::RInOrder(R->Right);
+	}
+}
+
+void BBTree::InOrder() {
+	BBTree::RInOrder(Root);
+}
+```
+
+
+##### Métodos PreOrder e PosOrder
+
+Esses métodos seguem a lógica de implementação semelhante ao **InOrder** mas com regra de percurso diferente, sendo o PreOrder `(root/left/right)` e o PosOrder `(left/right/root)`.
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	public: BBTree();
+	private: static void RInOrder(Node* R);
+	public: void InOrder();
+	private: static void RPreOrder(Node* R);
+	public: void PreOrder();
+	private: static void RPosOrder(Node* R);
+	public: void PosOrder();
+};
+```
+
+```cpp
+// BBTREE.CPP \\
+
+void BBTree::RPreOrder(Node* R) {
+	if(R) {
+		cout << R->Key << " ";
+		BBTree::RPreOrder(R->Left);
+		BBTree::RPreOrder(R->Right);
+	}
+}
+
+void BBTree::PreOrder() {
+	BBTree::RPreOrder(Root);
+}
+
+void BBTree::RPosOrder(Node* R) {
+	if(R) {
+		BBTree::RPosOrder(R->Left);
+		BBTree::RPosOrder(R->Right);
+		cout << R->Key << " ";
+	}
+}
+
+void BBTree::PosOrder() {
+	BBTree::RPosOrder(Root);
+}
+```
