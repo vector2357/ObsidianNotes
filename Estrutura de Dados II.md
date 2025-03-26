@@ -491,3 +491,71 @@ void BBTree::PosOrder() {
 	BBTree::RPosOrder(Root);
 }
 ```
+
+
+##### Método Search
+
+Método utilizado para buscar uma chave `K` na árvore de forma recursiva. A lógica do método consiste em buscar um nodo e retornar ao mundo externo um dado do tipo `Thing*`, ou seja, um **ponteiro** para o dado (primitivo ou não) que possui dentro do nosso nodo.
+
+Estruturação da recursão utilizada no método:
+
+- <span style="color:rgb(146, 208, 80)">Base :</span>
+  Se a raiz da subárvore atual é `NULL` ou possui a chave igual ao `K` que estamos buscando, retornamos essa raiz.
+
+- <span style="color:rgb(146, 208, 80)">Hipótese :</span>
+  Suponha que eu saiba percorrer qualquer subárvore (esquerda e direita) se não for `NULL`.
+
+- <span style="color:rgb(146, 208, 80)">Indução :</span>
+  Percorre a subárvore esquerda caso `K < R->Key`. Percorre a subárvore direita caso contrário.
+
+
+Dessa forma, nossa classe **BBTree** ficará da seguinte forma:
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	public: BBTree();
+	private: static void RInOrder(Node* R);
+	public: void InOrder();
+	private: static void RPreOrder(Node* R);
+	public: void PreOrder();
+	private: static void RPosOrder(Node* R);
+	public: void PosOrder();
+	private: static Node* RSearch(Node* R, int K);
+	public: Thing* Search(int K);
+};
+```
+
+Percebe-se que incrementamos 2 métodos, um privado (e estático, por ser recursivo) e outro público que poderá ser utilizado pelo mundo externo.
+Implementação :
+
+```cpp
+// BBTREE.CPP \\
+
+Node* BBTree::RSearch(Node* R, int K) {
+	if(!R || R->Key == K) {
+		return R;
+	}
+	// Não é nulo e não é ele
+	
+	if(K < R->Key) {
+		return BBTree::RSearch(R->Left, K);
+	}
+	// Só pode estar à direita
+	return BBTree::RSearch(R->Right, K);
+}
+
+Thing* BBTree::Search(int K) {
+	Thing* T = NULL;
+	Node* N = BBTree::RSearch(Root, K);
+	
+	if(N) {
+		T = new Thing;
+		*T = N->D;
+	}
+	return T;
+}
+```

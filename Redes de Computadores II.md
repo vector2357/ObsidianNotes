@@ -209,6 +209,10 @@ A classe D foi criada com o intuito de enviar pacotes por propagação Multicast
 
 -- -
 
+#### DHCP (Dynamic Host Configuration Protocol)
+
+É um protocolo que atribui endereços IP a dispositivos de uma rede, de forma automática.
+
 #### Sub-Redes e CIDR (Classless Inter-Domain Routing)
 
 
