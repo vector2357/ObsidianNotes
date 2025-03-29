@@ -38,7 +38,7 @@ void insertionSort(int *V, int n) {            // custo  // vezes
         int aux = V[i];                        //  c3    // n-1
 
         for(j=i-1; j>=0 && aux<V[j]; j--) {    //  c4    // (n+2)*(n-1)/2
-            arr[j+1] = V[j];                   //  c5    // n * (n-1)/2
+            V[j+1] = V[j];                     //  c5    // n * (n-1)/2
         }
         V[j+1] = aux;                          //  c6    // n-1
     }
@@ -557,5 +557,51 @@ Thing* BBTree::Search(int K) {
 		*T = N->D;
 	}
 	return T;
+}
+```
+
+
+##### Método Insert
+
+No método para inserir um nó na árvore, utilizaremos a mesma lógica do método de busca, percorrendo para a subárvore esquerda caso a chave seja menor que a raiz atual ou para a direita caso contrário, até que se chegue em uma raiz `NULL`.
+
+Nesse método, será passado como parâmetro um **ponteiro para ponteiro** `R` da raiz da subárvore atual. Dessa forma teremos um ponteiro `R` que armazenará o **endereço** do ponteiro que armazena o endereço da raiz atual. Dessa maneira podemos guardar o ponteiro que referencia o endereço no qual vamos inserir o novo nó.
+
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	// MÉTODOS ANTERIORES 
+	// ...
+	
+	private: static void RInsert(Node** R, Node* P, int K);
+	public: void Insert(int K, Thing D);
+};
+```
+
+```cpp
+// BBTREE.CPP \\
+
+void BBTree::RInsert(Node** R, Node* P, int K) {
+	if(!(*R)) {
+		*R = P;
+	}
+	else {
+		if(K < (*R)->Key) {
+			BBTree::RInsert(&(*R)->Left, P, K);
+		}
+		else {
+			BBTree::RInsert(&(*R)->Right, P, K);
+		}
+	}
+}
+
+void BBTree::Insert(int K, Thing D) {
+	Node* P = new Node(K, D);
+	Node** R = &Root;
+	BBTree::RInsert(R, P, K);
 }
 ```
