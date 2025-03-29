@@ -493,7 +493,7 @@ void BBTree::PosOrder() {
 ```
 
 
-##### Método Search
+##### Método Search (busca)
 
 Método utilizado para buscar uma chave `K` na árvore de forma recursiva. A lógica do método consiste em buscar um nodo e retornar ao mundo externo um dado do tipo `Thing*`, ou seja, um **ponteiro** para o dado (primitivo ou não) que possui dentro do nosso nodo.
 
@@ -561,7 +561,7 @@ Thing* BBTree::Search(int K) {
 ```
 
 
-##### Método Insert
+##### Método Insert (inserção)
 
 No método para inserir um nó na árvore, utilizaremos a mesma lógica do método de busca, percorrendo para a subárvore esquerda caso a chave seja menor que a raiz atual ou para a direita caso contrário, até que se chegue em uma raiz `NULL`.
 
@@ -603,5 +603,131 @@ void BBTree::Insert(int K, Thing D) {
 	Node* P = new Node(K, D);
 	Node** R = &Root;
 	BBTree::RInsert(R, P, K);
+}
+```
+
+
+##### Métodos Min e Max
+
+Para achar o nó **mínimo** de uma árvore basta ir totalmente à esquerda até que não se tenha mais filho esquerdo. Para encontrar o **máximo** de uma árvore basta fazer o contrário.
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	// MÉTODOS ANTERIORES 
+	// ...
+	
+	private: static Node* Min(Node* R);
+	private: static Node* Max(Node* R);
+};
+```
+
+```cpp
+// BBTREE.CPP \\
+
+Node* BBTree::Min(Node* R) {
+	if(!R || !R->Left) {
+		return R;
+	}
+	return BBTree::Min(R->Left);
+}
+
+Node* BBTree::Max(Node* R) {
+	if(!R || !R->Right) {
+		return R;
+	}
+	return BBTree::Max(R->Right);
+}
+```
+
+
+##### Método Erase (exclusão)
+
+No método de exclusão podem haver 4 possibilidades, sendo elas :
+
+
+1. **Não existe o nó que deseja ser excluído.**
+   <span style="color:rgb(146, 208, 80)">Solução:</span>
+	   retorna `NULL`.
+
+2. **O nó `P` que se deseja excluir possui não possui filho à esquerda e pode possuir ou não filho à direita.**
+   <span style="color:rgb(146, 208, 80)">Solução:</span>
+	   nó pai aponta para filho à **direita** do nó `P` e logo em seguida o nó `P` é excluído.
+
+
+3. **O nó `P` que se deseja excluir só possui nó à direita.**
+   <span style="color:rgb(146, 208, 80)">Solução:</span>
+	   nó pai aponta para filho à **esquerda** do nó `P` e logo em seguida o nó `P` é excluído.
+
+4. **O nó `P` que se deseja excluir possui 2 filhos.**
+   <span style="color:rgb(146, 208, 80)">Solução:</span>
+	   encontra-se o **antecessor** ou **sucessor** do nó `P`, trocam-se os dados de ambos, exclui nó com os dados de `P`.
+
+
+> **Antecessor:**  o antecessor de `P` é o maior valor que seja menor que o valor da chave de `P`.
+> 
+> **Sucessor:**  o sucessor de `P` é o menor valor que seja maior que o valor da chave de `P`.
+
+
+```cpp
+// INTERFACE \\
+
+class BBTree {
+	private: Node* Root;
+	
+	// MÉTODOS ANTERIORES 
+	// ...
+	
+	private: static Thing* RErase(Node** R, int K);
+	public: Thing* Erase(int K);
+};
+```
+
+```cpp
+// BBTREE.CPP \\
+
+Thing* BBTree::RErase(Node** R, int K) {
+	if(!(*R)) {
+		return NULL;
+	}
+	// Tem Nó
+	if(K < (*R)->Key) {
+		return BBTree::RErase(&(*R)->Left, K);
+	}
+	if(K > (*R)->Key) {
+		return BBTree::RErase(&(*R)->Right, K);
+	}
+	// Achou o Nó
+	if(!(*R)->Left) {
+		// Não tem filho à esq
+		Node* P = (*R);
+		*R = (*R)->Right;
+		Thing* T = new Thing;
+		*T = P->D;
+		delete P;
+		return T;
+	}
+	// Tem filho à esq
+	if(!(*R)->Right) {
+		// Não tem filho à dir
+		Node* P = (*R);
+		*R = (*R)->Left;
+		Thing* T = new Thing;
+		*T = P->D;
+		delete P;
+		return T;
+	}
+	// Tem 2 filhos
+	Node* P = BBTree::Max((*R)->Left); // Antecessor
+	swap((*R)->Key, P->Key);
+	swap((*R)->D, P->D);
+	return BBTree::RErase(&(*R)->Left, K);
+}
+
+Thing* BBTree::Erase(int K) {
+	return BBTree::RErase(&Root, K);
 }
 ```
