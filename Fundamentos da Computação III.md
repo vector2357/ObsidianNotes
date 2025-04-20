@@ -47,8 +47,8 @@ $$
    \end{bmatrix}$$
    Portanto,
     $[A=B]$
--- -
 
+-- -
 #### Tipos de Matrizes
 
 
@@ -158,7 +158,7 @@ $$B=\begin{bmatrix}
 4 & 2
 \end{bmatrix}$$
 
-
+-- -
 #### Adição de Matrizes
 
 
@@ -195,7 +195,7 @@ Dada as matrizes $A$, $B$ e $C$ de mesma ordem $m\times n$ , temos:
 2. $A+(B+C) = (A+B) + C$           <span style="color:rgb(146, 208, 80)">( Associativa )</span> 
 3. $A+0=A$                                       <span style="color:rgb(192, 0, 0)">( elemento neutro da adição )</span> 
 
-
+-- -
 #### Multiplicação de uma Matriz por um escalar
 
 
@@ -222,7 +222,7 @@ Dada as matrizes $A$ e $B$ de mesma ordem $m\times n$ e escalares: $k, k_1, k_2$
 3. $k_1.(k_2.A) = (k_1.k_2).A = k_2.(k_1.A)$
 4. $0.A = 0$  ->  (matriz nula)
 
-
+-- -
 #### Multiplicação de Matriz
 
 
@@ -295,7 +295,7 @@ Seja $A$, $B$  e $C$ matrizes. Sempre que os produtos e somas existirem, definim
 3. $(A+B)C = AC+BC$     ->     distributividade
 4. $k.(AB) = (k.A)B = A(k.B)$     ->     $k$ é escalar
 
-
+-- -
 #### Matriz Transposta
 
 
@@ -333,7 +333,7 @@ Sejam $A$ e $B$ matrizes e $k$ um escalar, sempre que os produtos e somas envolv
 3. $(k.A)' = k.A'$
 4. $(AB)' = B'A'$
 
-
+-- -
 #### Matriz Hermitiana
 
 
@@ -363,7 +363,7 @@ $$A=A^H$$
 
 ><span style="color:rgb(255, 255, 0)">Conjugado Complexo</span> - em matemática, o conjugado de um número complexo $(z=a+bi)$ é representado por $(z=a-bi)$ , ou seja, trocamos o sinal de todas as variáveis complexas.
 
-
+-- -
 #### Traço
 
 
@@ -381,7 +381,7 @@ $$A=\begin{bmatrix}
 $$tr(A) = (-1)+5+3$$
 $$tr(A)=7$$
 
-
+-- -
 #### Matriz Normal
 
 
@@ -456,7 +456,7 @@ $$B^T.B=\begin{bmatrix}
 0 & 8
 \end{bmatrix}$$
 
-
+-- -
 #### Matriz Inversa
 
 
@@ -640,7 +640,7 @@ b_2 \\
 b_m
 \end{bmatrix}$$
 
-
+-- -
 #### Matriz Ampliada
 
 A matriz ampliada é uma matriz que une as colunas de duas matrizes, sendo útil para resolver sistemas de equações lineares.
@@ -680,7 +680,7 @@ $$M=\left[
 \end{array}
 \right]$$
 
-
+-- -
 #### Linha Equivalente
 
 <span style="color:rgb(146, 208, 80)">Definição:</span>  se $A$ e $B$ são matrizes $m\times n$ , dizemos que $B$ é linha equivalente de $A$, se $B$ for obtida de $A$ por um número **finito** de **operações elementares** sobre as linhas de $A$.
@@ -695,7 +695,7 @@ Assim, $B$ é **linha equivalente** de $A$.
 
 $$A\sim B\;\rightarrow\;S_B\sim S_A \quad (sistemas)$$
 
-
+-- -
 #### Forma Escada
 
 <span style="color:rgb(146, 208, 80)">Definição:</span>  uma matriz  $m\times n$  é linha reduzida à forma escada se :
@@ -752,7 +752,7 @@ $$M_e \sim M$$
 
 Para a formação de uma forma escada é necessário o uso das **operações lineares**, dessa maneira é possível resolver muitos sistemas lineares.
 
-
+-- -
 #### Posto e Nulidade
 
 <span style="color:rgb(146, 208, 80)">Definição:</span>  dada a matriz  $A_{m\times n}$ , seja  $B_{m\times n}$  a **matriz linha reduzida à forma escada** Linha equivalente a $A$.
@@ -775,7 +775,7 @@ $$p=2\;\;\rightarrow\;\;L_1,\;L_2$$
 **Nulidade :**
 $$n-p=3-2\;=\;1$$
 
-
+-- -
 #### Solução de um sistema de Equações Lineares
 
 <span style="color:rgb(146, 208, 80)">Definição:</span>  se tivermos um sistema de uma equação Linear e uma **incógnita**  $ax=b$ existirão ***3 possibilidades*** :
@@ -833,3 +833,57 @@ $$p_c=2\,,\;p_a=3$$
 $$p_c\neq p_a$$
 
 **Sistema impossível e não existe solução.**
+
+-- -
+#### Método de Gauss
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  com ($n-1$) passos, o sistema  $AX=B$  é transformado num sistema triangular equivalente  $UX=C$  o qual se resolve facilmente por **substituição retroativa.** 
+
+> **Exemplo:**
+
+$$\left\{\begin{array}{l}
+\;2x_1\;+\;3x_2\;-\;x_3\;=\;5 \\
+\;4x_1\;+\;4x_2\;-\;3x_3\;=\;3 \\
+\;2x_1\;-\;3x_2\;+\;x_3\;=\;-1
+\end{array}\right.$$
+
+$$M=\begin{bmatrix}
+2 & 3 & -1 & 5 \\
+4 & 4 & -3 & 3 \\
+2 & -3 & 1 & -1
+\end{bmatrix}=M^{(0)}$$
+
+pivô:  $a_{11}=2$ 
+$m_{21}=-\frac{a_{21}}{a_{11}}\;=\;-\frac{4}{2}=-2$
+$m_{31}=-\frac{a_{31}}{a_{11}}\;=\;-\frac{2}{2}=-1$
+
+$L_1\,^{(0)}\;\rightarrow\; L_1\,^{(1)}$
+$m_{21}.L_1\,^{(0)}+L_2\,^{(0)}\;\rightarrow\;L_2\,^{(1)}$
+$m_{31}.L_1\,^{(0)}+L_3\,^{(0)}\;\rightarrow\;L_3\,^{(1)}$
+
+$$=\;\begin{bmatrix}
+2 & 3 & -1 & 5 \\
+0 & -2 & -1 & -7 \\
+0 & -6 & 2 & -6
+\end{bmatrix}=M^{(1)}$$
+
+pivô:  $a_{22}=-2$
+$m_{32}=-\frac{a_{32}}{a_{22}}\;=\;-\frac{-6}{-2}=-3$
+
+$L_1\,^{(1)}\;\rightarrow\; L_1\,^{(2)}$
+$L_2\,^{(1)}\;\rightarrow\; L_2\,^{(2)}$
+$m_{32}.L_2\,^{(1)}+L_3\,^{(1)}\;\rightarrow\;L_3\,^{(2)}$
+
+$$=\;\begin{bmatrix}
+2 & 3 & -1 & 5 \\
+0 & -2 & -1 & -7 \\
+0 & 0 & 5 & 15
+\end{bmatrix}=M^{(2)}$$
+
+$$\left\{\begin{array}{l}
+\;2x_1\;+\;3x_2\;-\;x_3\;=\;5 \\
+\;-\;2x_2\;-\;x_3\;=\;-7 \\
+\;5x_3\;=\;15
+\end{array}\right.$$
+
+-- -
