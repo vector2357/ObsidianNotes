@@ -774,3 +774,62 @@ $$p=2\;\;\rightarrow\;\;L_1,\;L_2$$
 
 **Nulidade :**
 $$n-p=3-2\;=\;1$$
+
+
+#### Solução de um sistema de Equações Lineares
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  se tivermos um sistema de uma equação Linear e uma **incógnita**  $ax=b$ existirão ***3 possibilidades*** :
+
+1. $a\neq0$ , teremos  $x=\frac{b}{a}$ 
+2. $a=0$  e  $b=0$ , teremos  $ax=0$ , e qualquer número real **é solução.**
+3.  $a=0$  e  $b\neq0$ , logo  $0x=b$ . **Não existe solução.**
+
+<span style="color:rgb(255, 255, 0)">Teorema: </span> 
+
+1. Um sistema de $m$ equações e $n$ incógnitas admite solução se, somente se, o **posto** da matriz ampliada $p_a$ é igual ao posto da matriz dos coeficientes $p_c$.
+
+2. Se duas matrizes têm o mesmo posto $p$ e $p=n$, a solução é única.
+
+3. Se as duas matrizes tem o mesmo posto $p$ e $p\lt n$ , podemos escolher $n-p$ incógnitas, e as incógnitas diferentes dadas em função destas.
+
+> **Exemplo**
+
+( * )
+
+$$\begin{bmatrix}
+1 & 0 & 0 & 3 \\
+0 & 1 & 0 & -1 \\
+0 & 0 & 1 & 2
+\end{bmatrix}$$
+$$p_c=p_a=n=3$$
+**A solução é única.**
+
+
+( ** )
+
+$$\begin{bmatrix}
+1 & 0 & 7 & -10 \\
+0 & 1 & 5 & -6
+\end{bmatrix}$$
+$$p_c=p_a=2$$
+$$n=3$$
+
+Temos  $n-p$  graus de liberdade. (número de incógnitas dadas em função)
+
+$$\left\{\begin{array}{l}
+\;x_1\;=\;-10\;-7x_3 \\
+\;x_2\;=\;-6\;-5x_3
+\end{array}\right.$$
+
+
+( *** )
+
+$$\begin{bmatrix}
+1 & 0 & 7 & -10 \\
+0 & 1 & 5 & -6 \\
+0 & 0 & 0 & 2
+\end{bmatrix}$$
+$$p_c=2\,,\;p_a=3$$
+$$p_c\neq p_a$$
+
+**Sistema impossível e não existe solução.**

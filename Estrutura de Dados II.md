@@ -657,7 +657,6 @@ No método de exclusão podem haver 4 possibilidades, sendo elas :
    <span style="color:rgb(146, 208, 80)">Solução:</span>
 	   nó pai aponta para filho à **direita** do nó `P` e logo em seguida o nó `P` é excluído.
 
-
 3. **O nó `P` que se deseja excluir só possui nó à direita.**
    <span style="color:rgb(146, 208, 80)">Solução:</span>
 	   nó pai aponta para filho à **esquerda** do nó `P` e logo em seguida o nó `P` é excluído.
