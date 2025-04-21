@@ -941,3 +941,41 @@ a_{21} & a_{22}
 \end{bmatrix}\;\rightarrow\;det\,\mathbb{B}=k.(a_{11}.a_{22}\,-\,a_{12}.a_{21})=k.det\,\mathbb{B}$$
 
 -- -
+#### Desenvolvimento de Laplace
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  dada uma matriz  $\mathbb{A}$ , o determinante pode ser dado pelo processo de **pivoteamento** e cálculo de determinantes de matrizes de ordem menor que a original.
+
+$$\text{Cofator de } a_{ij}\text{ :}\quad \Delta=
+(-1)^{i+j}\;.\;\begin{vmatrix}A_{ij}\end{vmatrix}$$
+
+onde  $\begin{vmatrix}A_{ij}\end{vmatrix}$  é equivalente ao determinante da submatriz dada pela eliminação da linha $i$ e coluna $j$ .
+
+$$\text{Determinante de } \mathbb{A}\text{ :}\quad det\,\mathbb{A}=
+\sum_{j=1}^{n}a_{ij}\,.\,\Delta_{ij}$$
+
+> **Exemplo**
+
+$$\mathbb{A}=\begin{bmatrix}
+1 & -2 & 3 \\
+2 & 1 & -1 \\
+-2 & -1 & 2
+\end{bmatrix}$$
+$$det\,\mathbb{A}=(1).\Delta_{11}\;+\;(-2).\Delta_{12}\;+\;(3).\Delta_{13}$$
+
+$$\Delta_{11}=(-1)^{1+1}\;.\;\begin{vmatrix}
+1 & -1 \\
+-1 & 2 \end{vmatrix}\;=\;
+2-1=1$$
+$$\Delta_{12}=(-1)^{1+2}\;.\;\begin{vmatrix}
+2 & -1 \\
+-2 & 2 \end{vmatrix}\;=\;
+-(4-2)=-2$$
+$$\Delta_{13}=(-1)^{1+3}\;.\;\begin{vmatrix}
+2 & 1 \\
+-2 & -1 \end{vmatrix}\;=\;
+-2+2=0$$
+
+$$det\,\mathbb{A}=(1).(1)\;+\;(-2).(-2)\;+\;(3).(0)$$
+$$det\,\mathbb{A}=5$$
+
+-- -
