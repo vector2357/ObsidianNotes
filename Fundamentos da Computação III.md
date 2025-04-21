@@ -847,11 +847,11 @@ $$\left\{\begin{array}{l}
 \;2x_1\;-\;3x_2\;+\;x_3\;=\;-1
 \end{array}\right.$$
 
-$$M=\begin{bmatrix}
+$$\mathbb{M}=\begin{bmatrix}
 2 & 3 & -1 & 5 \\
 4 & 4 & -3 & 3 \\
 2 & -3 & 1 & -1
-\end{bmatrix}=M^{(0)}$$
+\end{bmatrix}=\mathbb{M}^{(0)}$$
 
 pivô:  $a_{11}=2$ 
 $m_{21}=-\frac{a_{21}}{a_{11}}\;=\;-\frac{4}{2}=-2$
@@ -865,7 +865,7 @@ $$=\;\begin{bmatrix}
 2 & 3 & -1 & 5 \\
 0 & -2 & -1 & -7 \\
 0 & -6 & 2 & -6
-\end{bmatrix}=M^{(1)}$$
+\end{bmatrix}=\mathbb{M}^{(1)}$$
 
 pivô:  $a_{22}=-2$
 $m_{32}=-\frac{a_{32}}{a_{22}}\;=\;-\frac{-6}{-2}=-3$
@@ -878,12 +878,66 @@ $$=\;\begin{bmatrix}
 2 & 3 & -1 & 5 \\
 0 & -2 & -1 & -7 \\
 0 & 0 & 5 & 15
-\end{bmatrix}=M^{(2)}$$
+\end{bmatrix}=\mathbb{M}^{(2)}$$
 
 $$\left\{\begin{array}{l}
 \;2x_1\;+\;3x_2\;-\;x_3\;=\;5 \\
 \;-\;2x_2\;-\;x_3\;=\;-7 \\
 \;5x_3\;=\;15
 \end{array}\right.$$
+
+-- -
+#### Determinante
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  o  $det\,[a_{ij}]=\sum_{i=1}^{p}\;(-1)^{J_i}.a_{1j_1}.a_{2j_2}\,...\,a_{nj_n}$ , onde  $J_i=J(j_1, j_2\,...\,j_n)$  é o número de **inversões** da permutação $J$  e  $p$  indica que a soma se faz por todas as  $n!$ permutações. 
+
+> **Exemplo**
+
+$(\,1\;2\;3\,)$
+
+|   Permutações   | Inversões |
+| :-------------: | :-------: |
+|                 |           |
+| $(\,1\;2\;3\,)$ |     0     |
+| $(\,1\;3\;2\,)$ |     1     |
+| $(\,2\;1\;3\,)$ |     1     |
+| $(\,2\;3\;1\,)$ |     2     |
+| $(\,3\;1\;2\,)$ |     2     |
+| $(\,3\;2\;1\,)$ |     3     |
+
+$$\begin{bmatrix}
+a_{11} & a_{12} & a_{13} \\
+a_{21} & a_{22} & a_{23} \\
+a_{31} & a_{32} & a_{33}
+\end{bmatrix}$$
+
+$$=\;a_{11}.a_{22}.a_{33}\,-\,a_{11}.a_{23}.a_{32}\,-\,a_{12}.a_{21}.a_{33}\,+\,a_{12}.a_{23}.a_{31}\,+\,a_{13}.a_{21}.a_{32}\,-\,a_{13}.a_{22}.a_{31}$$
+
+<span style="color:rgb(255, 255, 0)">Propriedades:</span>  dada as matrizes  $\mathbb{A}, \mathbb{B}$  e  $k \in \mathbb{R}$ :
+
+1. Se todos os elementos de uma linha ou coluna são **nulos**,  $det\,\mathbb{A}=0$ ;
+
+$$\mathbb{A}=\begin{bmatrix}
+a_{11} & a_{12} \\
+0 & 0
+\end{bmatrix}\;\rightarrow\;det\,\mathbb{A}=0$$
+
+2. $det\,\mathbb{A} = det\,\mathbb{A}'$ 
+
+$$\mathbb{A}=\begin{bmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}\;\rightarrow\;det\,\mathbb{A}=a_{11}.a_{22}\,-\,a_{12}.a_{21}$$
+$$\mathbb{A}'=\begin{bmatrix}
+a_{11} & a_{21} \\
+a_{12} & a_{22}
+\end{bmatrix}\;\rightarrow\;det\,\mathbb{A}'=a_{11}.a_{22}\,-\,a_{21}.a_{12}$$
+
+3. Se multiplicar uma linha da matriz  $\mathbb{B}$  por  $k \in \mathbb{R}$  o determinante fica multiplicado por $k$ .
+
+$$\mathbb{B}=\begin{bmatrix}
+k.a_{11} & k.a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}\;\rightarrow\;det\,\mathbb{B}=k.(a_{11}.a_{22}\,-\,a_{12}.a_{21})=k.det\,\mathbb{B}$$
 
 -- -
