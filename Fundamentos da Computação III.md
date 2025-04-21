@@ -979,3 +979,34 @@ $$det\,\mathbb{A}=(1).(1)\;+\;(-2).(-2)\;+\;(3).(0)$$
 $$det\,\mathbb{A}=5$$
 
 -- -
+#### Matriz de Cofatores
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  dada uma matriz  $\mathbb{A}$ , a matriz de cofatores  $\overline{\mathbb{A}}$  é dado pelos cofatores de todos os elementos da matriz original.
+
+$$\mathbb{A}=\begin{bmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}$$
+$$\overline{\mathbb{A}}=\begin{bmatrix}
+\Delta_{11} & \Delta_{12} \\
+\Delta_{21} & \Delta_{22}
+\end{bmatrix}$$
+
+> **Exemplo**
+
+$$\mathbb{A}=\begin{bmatrix}
+-2 & 3 \\
+2 & 1
+\end{bmatrix}$$
+
+$$\Delta_{11}=(-1)^{1+1}\;.\;\begin{vmatrix}\,1\,\end{vmatrix}\;=\;1$$
+$$\Delta_{12}=(-1)^{1+2}\;.\;\begin{vmatrix}\,2\,\end{vmatrix}\;=\;-2$$
+$$\Delta_{21}=(-1)^{2+1}\;.\;\begin{vmatrix}\,3\,\end{vmatrix}\;=\;-3$$
+$$\Delta_{22}=(-1)^{2+2}\;.\;\begin{vmatrix}\,-2\,\end{vmatrix}\;=\;-2$$
+
+$$\overline{\mathbb{A}}=\begin{bmatrix}
+1 & -2 \\
+-3 & -2
+\end{bmatrix}$$
+
+-- -
