@@ -1010,3 +1010,28 @@ $$\overline{\mathbb{A}}=\begin{bmatrix}
 \end{bmatrix}$$
 
 -- -
+#### Matriz Adjunta
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  dada uma matriz  $\mathbb{A}$ , chamamos de **adjunta** de $\mathbb{A}$ , ou  $adj\,\mathbb{A}$ , a **transposta** da matriz cofator  $\overline{\mathbb{A}}$ .
+
+$$adj\,\mathbb{A}\,=\,(\overline{\mathbb{A}})'$$
+
+<span style="color:rgb(255, 255, 0)">Teorema:</span>
+$$\mathbb{A}.(adj\,\mathbb{A})\,=\,(det\,\mathbb{A}).\mathbb{I}_n$$
+
+> **Exemplo**
+
+$$\mathbb{A}=\begin{bmatrix}
+-2 & 3 \\
+2 & 1
+\end{bmatrix}$$
+$$\overline{\mathbb{A}}=\begin{bmatrix}
+1 & -2 \\
+-3 & -2
+\end{bmatrix}$$
+$$adj\,\mathbb{A}=\begin{bmatrix}
+1 & -3 \\
+-2 & -2
+\end{bmatrix}$$
+
+-- -
