@@ -607,7 +607,7 @@ $$A=\begin{bmatrix}
 ### Sistemas Lineares
 
 
-> <span style="color:rgb(255, 255, 0)">Introdução</span> 
+> ***Introdução*** 
 
    Um sistema de equações lineares com  $m$  equações e  $n$  incógnitas e um conjunto do tipo:
 
@@ -1123,5 +1123,82 @@ $$L_2\,\leftarrow\,-\frac{1}{3}\,.\,L_2\quad\rightarrow\quad
 $$\mathbb{A}^{-1}\,=\,\begin{bmatrix}
 0 & 1 \\
 -\frac{1}{3} & \frac{2}{3}\end{bmatrix}$$
+
+-- -
+#### Regra de Cramer
+
+<span style="color:rgb(146, 208, 80)">Definição:</span>  o cálculo de matrizes inversas  $\mathbb{A}^{-1}$  fornece outro método de solução de sistemas lineares quando o número de equações é igual o número de incógnitas.
+
+$$\left\{\begin{array}{l}
+\;a_{11}.x_1\;+\;a_{12}.x_2\;+\;...\;+\;a_{1n}.x_n\;=\;b_1 \\
+\;a_{21}.x_1\;+\;a_{22}.x_2\;+\;...\;+\;a_{2n}.x_n\;=\;b_2 \\
+... \\
+... \\
+\;a_{n1}.x_1\;+\;a_{n2}.x_2\;+\;...\;+\;a_{nn}.x_n\;=\;b_n \\
+\end{array}\right.$$
+
+logo, em forma matricial :
+
+$$\begin{bmatrix}
+a_{11} & a_{12} & .. & a_{1n} \\
+a_{21} & a_{22} & .. & a_{2n} \\
+.. & .. & & .. \\
+a_{n1} & a_{n2} & .. & a_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+.. \\
+x_m
+\end{bmatrix}\;=\;
+\begin{bmatrix}
+b_1 \\
+b_2 \\
+.. \\
+b_n
+\end{bmatrix}$$
+
+$$\mathbb{AX=B}\quad\rightarrow\quad\mathbb{X=A}^{-1}.\mathbb{B}$$
+
+> **Exemplo**
+
+$$\left\{\begin{array}{l}
+\;x\;+\;3y\;=\;1 \\
+\;2x\;+\;y\;=\;5
+\end{array}\right.$$
+$$\begin{bmatrix}
+1 & 3 \\
+2 & 1\end{bmatrix}
+\begin{bmatrix}
+x \\
+y\end{bmatrix}\;=\;
+\begin{bmatrix}
+1 \\
+5\end{bmatrix}$$
+
+$$\mathbb{A}=\begin{bmatrix}
+1 & 3\\
+2 & 1\end{bmatrix}$$
+
+$$\Delta_{11}=(-1)^{1+1}\;.\;\begin{bmatrix}\,1\,\end{bmatrix}\;=\;1$$
+$$\Delta_{12}=(-1)^{1+2}\;.\;\begin{bmatrix}\,2\,\end{bmatrix}\;=\;-2$$
+$$\Delta_{21}=(-1)^{2+1}\;.\;\begin{bmatrix}\,3\,\end{bmatrix}\;=\;-3$$
+$$\Delta_{22}=(-1)^{2+2}\;.\;\begin{bmatrix}\,1\,\end{bmatrix}\;=\;1$$
+
+$$adj\,\mathbb{A}=\begin{bmatrix}
+1 & -3\\
+-2 & 1\end{bmatrix}$$
+$$det\,\mathbb{A}\,=\,1-6\,=\,-5$$
+
+$$\mathbb{A}^{-1}\;=\;\frac{1}{det\,\mathbb{A}}\,.\,adj\,\mathbb{A}\;=\;
+-\frac{1}{5}\,.\,\begin{bmatrix}1&-3\\-2&1\end{bmatrix}$$
+
+$$\mathbb{X=A}^{-1}.\mathbb{B}\quad\rightarrow\quad
+-\frac{1}{5}\,.\,\begin{bmatrix}1&-3\\-2&1\end{bmatrix}
+\begin{bmatrix}1\\5\end{bmatrix}$$
+
+$$=\;\begin{bmatrix}
+\frac{14}{5}\\
+-\frac{3}{5}\end{bmatrix}$$
 
 -- -
