@@ -460,30 +460,30 @@ $$B^T.B=\begin{bmatrix}
 #### Matriz Inversa
 
 
-<span style="color:rgb(146, 208, 80)">Definição:</span>  uma matriz  $A=[a_{ij}]_{n\times n}$  é chamada matriz inversa (não singular) se existe uma matriz  $X=[x_{ij}]_{n\times n}$ , que satisfaz as duas equações:
+<span style="color:rgb(146, 208, 80)">Definição:</span>  uma matriz  $\mathbb{A}=[a_{ij}]_{n\times n}$  é chamada matriz inversa (não singular) se existe uma matriz  $\mathbb{X}=[x_{ij}]_{n\times n}$ , que satisfaz as duas equações:
 
-$$AX=I$$
-$$XA=I$$
+$$\mathbb{AX}=\mathbb{I}$$
+$$\mathbb{XA}=\mathbb{I}$$
 
-onde $X$ é a matriz inversa de $A$.
+onde $\mathbb{X}$ é a matriz inversa de $\mathbb{A}$.
 
-$$A.A^{-1}=I$$
+$$\mathbb{A}.\mathbb{A}^{-1}=\mathbb{I}$$
 
 
 > **Exemplo**
 
-$$A=\begin{bmatrix}
+$$\mathbb{A}=\begin{bmatrix}
 2 & 3 \\
 1 & 4
 \end{bmatrix}$$
 
-Determine $A^{-1}$.
+Determine $\mathbb{A}^{-1}$.
 
-$$A^{-1}=\begin{bmatrix}
+$$\mathbb{A}^{-1}=\begin{bmatrix}
 a & b \\
 c & d
 \end{bmatrix}
-\qquad A.A^{-1}=I$$
+\qquad \mathbb{A}.\mathbb{A}^{-1}=\mathbb{I}$$
 $$\begin{bmatrix}
 2 & 3 \\
 1 & 4
@@ -515,20 +515,20 @@ $$\left\{\begin{array}{l}
 \;b+4d=1
 \end{array}\right.$$
 
-$$A^{-1}=\begin{bmatrix}
+$$\mathbb{A}^{-1}=\begin{bmatrix}
 \frac{4}{5} & \frac{3}{5} \\
 -\frac{1}{5} & -\frac{2}{5}
 \end{bmatrix}$$
 
 ##### Propriedades
 
-Se $A$ e $B$ são matrizes  $n\times n$ , ambas inversíveis, então :
+Se $\mathbb{A}$ e $\mathbb{B}$ são matrizes  $n\times n$ , ambas inversíveis, então :
 
-1. $(AB)^{-1}=B^{-1}A^{-1}$
-2. $Se\quad BA=I,\quad logo\quad B=A^{-1}$
-3. $Se\quad AB\neq I,\quad B\;\;é\;\;uma\;\;matriz\;\;singular$
-4. $Se\;\;A\;\; é\;\;inversa\;\;de\;\;B,\;\;Logo$
-   $[A,B]=0$
+1. $(\mathbb{AB})^{-1}=\mathbb{B}^{-1}\mathbb{A}^{-1}$
+2. $Se\quad \mathbb{BA}=\mathbb{I},\quad logo\quad \mathbb{B}=\mathbb{A}^{-1}$
+3. $Se\quad \mathbb{AB}\neq \mathbb{I},\quad \mathbb{B}\;\;é\;\;uma\;\;matriz\;\;singular$
+4. $Se\;\;\mathbb{A}\;\; é\;\;inversa\;\;de\;\;\mathbb{B},\;\;Logo$
+   $[\mathbb{A},\mathbb{B}]=0$
 
 
 <span style="color:rgb(255, 255, 0)">Teorema:</span>  seja  $A^{-1}$  uma matriz inversa de  $A$. Então, $A^{-1}$  é única.
@@ -1033,5 +1033,95 @@ $$adj\,\mathbb{A}=\begin{bmatrix}
 1 & -3 \\
 -2 & -2
 \end{bmatrix}$$
+
+-- -
+#### Matriz Inversa - Propriedades e Cálculo
+
+1. Se  $\mathbb{A}$  e  $\mathbb{B}$  são matrizes quadradas de mesma ordem, ambas **invertíveis**, então $\mathbb{AB}$ é invertível e :
+$$(\mathbb{AB})^{-1}=\mathbb{B}^{-1}.\mathbb{A}^{-1}$$
+
+2. $\mathbb{AA}^{-1}\,=\,\mathbb{A}^{-1}\mathbb{A}\,=\,\mathbb{I}$ 
+
+3. Nem toda matriz tem inversa ( $det\,\mathbb{A}=0$ ) :
+$$\mathbb{A}=\begin{bmatrix}
+0 & 1 \\
+0 & 2 \end{bmatrix}\;\rightarrow\;det\,\mathbb{A}=0$$
+
+4. O **determinante** da multiplicação entre uma matriz e sua inversa é igual ao determinante da matriz multiplicado ao determinante da inversa dessa matriz, logo:
+
+$$det(\mathbb{AA}^{-1})=det\,\mathbb{A}\,.\,det\,\mathbb{A}^{-1}$$
+$$1 = det\,\mathbb{A}\,.\,det\,\mathbb{A}^{-1}$$
+$$det\,\mathbb{A}^{-1}=\frac{1}{det\,\mathbb{A}}$$
+
+<span style="color:rgb(255, 255, 0)">Teorema:</span>  podemos calcular a inversa de uma matriz quadrada invertível partindo do teorema  $\mathbb{A}\,.\,adj\,\mathbb{A}\,=\,det\,\mathbb{A}\,.\,\mathbb{I}$
+
+$$\mathbb{A}\,.\,adj\,\mathbb{A}\,=\,(det\,\mathbb{A})\,.\,\mathbb{AA}^{-1}$$
+$$adj\,\mathbb{A}\,=\,(det\,\mathbb{A})\,.\,\mathbb{A}^{-1}$$
+$$\mathbb{A}^{-1}\,=\,\frac{1}{det\,\mathbb{A}}\,.\,adj\,\mathbb{A}$$
+
+> **Exemplo**
+
+$$\mathbb{A}=\begin{bmatrix}
+-2 & 3 \\
+2 & 1
+\end{bmatrix}$$
+
+$$det\,\mathbb{A}\,=\,
+(-2)\,.\,(-1)^{1+1}\,.\,1\;+\;(3)\,.\,(-1)^{1+2}\,.\,2$$
+$$det\,\mathbb{A}\,=\,-8$$
+$$adj\,\mathbb{A}=\begin{bmatrix}
+1 & -3 \\
+-2 & -2
+\end{bmatrix}$$
+
+$$\mathbb{A}^{-1}\,=\,\begin{bmatrix}
+-\frac{1}{8} & \frac{3}{8} \\
+\frac{1}{4} & \frac{1}{4}
+\end{bmatrix}$$
+
+##### Processo de Inversão
+
+<span style="color:rgb(255, 255, 0)">Teorema:</span>  se a matriz  $\mathbb{A}$  pode ser reduzida à **matriz identidade** por uma sequência de operações elementares com linhas, então  $\mathbb{A}$  é invertível e a matriz inversa de  $\mathbb{A}$  pode ser obtida a partir da matriz identidade, aplicando-se a mesma sequência de operações com linhas.
+
+$$(\,\mathbb{A}:\mathbb{I}\,)\;\rightarrow\;
+(\,\mathbb{I}:\mathbb{A}^{-1})$$
+
+> **Exemplo**
+
+$$\mathbb{A}=\begin{bmatrix}
+2 & -3 \\
+1 & 0\end{bmatrix}$$
+
+$$\left[
+\begin{array}{cc|cc}
+2 & -3 & 1 & 0\\
+1 & 0 & 0 & 1
+\end{array}
+\right]$$
+$$L_1\,\leftrightarrow\,L_2\quad\rightarrow\quad
+\left[
+\begin{array}{cc|cc}
+1 & 0 & 0 & 1\\
+2 & -3 & 1 & 0
+\end{array}
+\right]$$
+$$L_2\,\leftarrow\,L_2\,-2\,.\,L_1\quad\rightarrow\quad
+\left[
+\begin{array}{cc|cc}
+1 & 0 & 0 & 1\\
+0 & -3 & 1 & -2
+\end{array}
+\right]$$
+$$L_2\,\leftarrow\,-\frac{1}{3}\,.\,L_2\quad\rightarrow\quad
+\left[
+\begin{array}{cc|cc}
+1 & 0 & 0 & 1\\
+0 & 1 & -\frac{1}{3} & \frac{2}{3}
+\end{array}
+\right]$$
+
+$$\mathbb{A}^{-1}\,=\,\begin{bmatrix}
+0 & 1 \\
+-\frac{1}{3} & \frac{2}{3}\end{bmatrix}$$
 
 -- -
