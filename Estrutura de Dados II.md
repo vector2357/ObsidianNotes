@@ -17,7 +17,7 @@ A complexidade de um algoritmo pode ser analisada sob dois principais aspectos:
 
    Refere-se à quantidade de memória adicional necessária para executar um algoritmo, além do espaço usado para armazenar a entrada.
 
-
+-- -
 #### Análise de Algoritmos
 
 Analisar um algoritmo significa prever os recursos de que o algoritmo necessita. Ocasionalmente, recursos como memória, largura de banda de comunicação ou hardware de computador são a principal preocupação, porém mais frequentemente é o tempo de computação que desejamos medir.
@@ -64,7 +64,7 @@ $$ T(n) = a.n^2 + b.n + c $$
 
 Dessa maneira chegamos a conclusão que a nossa função é quadrática, sendo assim, o nosso algoritmo de inserção no <span style="color:rgb(255, 0, 0)">PIOR CASO</span> cresce de maneira quadrática.
 
-
+---
 #### Notação Assintótica
 
 Notação Assintótica é uma linguagem que nos permite analisar o tempo de execução de um algoritmo através da identificação de seu comportamento com o crescimento da entrada oferecida. Isso também é conhecido como taxa de crescimento do algoritmo.
@@ -97,7 +97,7 @@ Podemos então definir a complexidade desse algoritmo no **pior caso**, <span st
 $$O(n^2)$$
 
 
-#### <span style="color:rgb(146, 208, 80)">Notação</span> $\Omega$ (Omega)
+##### <span style="color:rgb(146, 208, 80)">Notação</span> $\Omega$ (Omega)
 
    A **notação $\Omega$** nos dá um limite assintótico inferior à função de crescimentos do algoritmo
 
@@ -125,7 +125,7 @@ Podemos então definir a complexidade desse algoritmo no **pior caso**, <span st
 $$\Omega(n^2)$$
 
 
-#### <span style="color:rgb(146, 208, 80)">Notação</span> $\Theta$ (Theta)
+##### <span style="color:rgb(146, 208, 80)">Notação</span> $\Theta$ (Theta)
 
    A **notação** $\Theta$ nos dá um limite <span style="color:rgb(255, 255, 0)">inferior</span> e <span style="color:rgb(0, 176, 240)">superior</span> à função de crescimento do algoritmo
 
@@ -152,7 +152,7 @@ Podemos então definir a complexidade desse algoritmo no **pior caso**, <span st
 
 $$\Theta(n^2)$$
 
-
+---
 #### Análise Merge Sort
 
 O algoritmo de Mergesort usa a estratégia de [[Divide and Conquer]] para ordenar um dado vetor.
@@ -233,7 +233,7 @@ Então, podemos concluir :
 $$(\log_2 N) + 1 \; \times \; \Theta(N)$$
 $$\Theta(N\times\log_2 N)$$
 
-
+---
 ### Árvores
 
 
@@ -252,7 +252,7 @@ A <span style="color:rgb(0, 176, 240)">Profundidade</span> de um **nó** é o ta
 
 ![[Pasted image 20250303164558.png]]
 
-
+---
 ### Árvores Binárias
 
 
@@ -287,7 +287,7 @@ A complexidade de uma árvore genérica de grau $K$ é dado por :
 
 $$\Theta(log_k\;N)$$
 
-
+---
 #### Árvores de Busca Binária
 
 Árvores de Busca Binária (<span style="color:rgb(146, 208, 80)">Binary Search Tree - BST</span>), são árvores binárias, ou seja, cada nó tem no **máximo** 2 filhos, que é utilizada para efetuar buscas eficazes, de tal maneira que a busca é feita por alguma chave de um certo tipo específico.
@@ -730,3 +730,41 @@ Thing* BBTree::Erase(int K) {
 	return BBTree::RErase(&Root, K);
 }
 ```
+
+---
+#### Árvore Balanceada AVL
+
+A árvore **AVL** é uma árvore de busca binária onde é garantido, por meio de autobalanceamento, que a complexidade dos métodos de inserção, exclusão e busca no pior caso serão em  $O\,(\log_2 n)$. Isso se dá por conta da garantia de que a altura de uma determinada árvore com  $n$  nós será de aproximadamente  $\log_2 n$ .
+
+Para que uma árvore seja considerada **AVL** é preciso respeitar uma única propriedade :
+
+- Todo nó da árvore possui <span style="color:rgb(146, 208, 80)">Fator de Balanceamento</span> no intervalo de $[ -1, 0, 1]$.
+
+> ***Fator de Balanceamento:***  é a diferença entre a altura de sua sub-árvore à direita e de sua sub-árvore à esquerda.  $(\,fb=hr-hl\,)$
+
+![[avl_notavl.png]]
+
+
+Dessa maneira, precisaremos adicionar o atributo `fb` na classe `Node` que determinará o fator de balanceamento do nó.
+
+```cpp
+class Node {
+private:
+	int K;
+	Thing D;
+	int fb;      // Novo atributo do Nó
+	Node* Left;
+	Node* Right;
+};
+```
+
+Para fazer o autobalanceamento, a árvore AVL utiliza métodos de rotação sendo eles:
+
+- ***Rotação Simples à Esquerda (RSE)***
+-  ***Rotação Simples à Direita (RSD)***
+-  ***Rotação Dupla à Esquerda (RDE)***
+-  ***Rotação Dupla à Direita (RDD)***
+
+
+##### Método RSE
+
