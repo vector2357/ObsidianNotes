@@ -41,33 +41,58 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Redes de Computadores II.md",
+                "file": "Sistemas Operacionais I.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Redes de Computadores II"
+              "title": "Sistemas Operacionais I"
+            }
+          },
+          {
+            "id": "d4cf294838aafd69",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cálculo Numérico.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Cálculo Numérico"
             }
           },
           {
             "id": "e9ea40155feb7d02",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "JDBC (canvas).canvas",
-                "viewState": {
-                  "x": 1260.6527264038168,
-                  "y": 463.3845773659384,
-                  "zoom": -1.5698348262559645
-                }
+                "file": "CSS (Cascading Style Sheets).md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "JDBC (canvas)"
+              "icon": "lucide-file",
+              "title": "CSS (Cascading Style Sheets)"
+            }
+          },
+          {
+            "id": "d98566f958a3a36a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Fundamentos da Computação III.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Fundamentos da Computação III"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -202,6 +227,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -211,26 +237,36 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c1267f32c31c3c48",
+  "active": "32ab838e4eda2dc8",
   "lastOpenFiles": [
+    "Images/os-image12.png",
+    "Images/_- visual selection.png",
+    "Images/os-image11.png",
+    "Images/os-image10.png",
+    "Images/os-image9.png",
+    "Images/os-image8.png",
+    "JDBC (canvas).canvas",
+    "Untitled.base",
+    "HTML (HyperText Markup Language).md",
+    "2025-09-13.md",
+    "Untitled 1.base",
+    "Sistemas Operacionais I.md",
+    "Images/os-image7.png",
+    "Images/os-image6.png",
+    "Images/os-image5.png",
+    "Images/os-image4.png",
+    "Images/os-image3.png",
     "Fundamentos da Computação III.md",
-    "Images/Pasted image 20250217214010.png",
-    "Images/avl_notavl.png",
+    "Cálculo Numérico.md",
+    "CSS (Cascading Style Sheets).md",
     "Estrutura de Dados II.md",
-    "Pasted image 20250424180441.png",
+    "2025-07-16.md",
+    "JavaScript.md",
+    "JDBC - Java DB Connection.md",
     "Redes de Computadores II.md",
     "Arquitetura de Computadores II.md",
-    "Images/Pasted image 20250311152519.png",
-    "JDBC (canvas).canvas",
-    "Images/Pasted image 20250303223215.png",
     "Heap Sort.md",
-    "Images/Pasted image 20250303164558.png",
     "Tipo Abstrato de Dados - TAD.md",
-    "Images/Pasted image 20250224205805.png",
-    "Images/Pasted image 20250218145743.png",
-    "Images/Pasted image 20250218150232.png",
-    "Images/Pasted image 20250222225237.png",
-    "JDBC - Java DB Connection.md",
     "Drawing 2025-02-17 23.30.31.excalidraw.md",
     "Images",
     "Padrão DAO (Data Access Object).md",

@@ -766,5 +766,14 @@ Para fazer o autobalanceamento, a árvore AVL utiliza métodos de rotação send
 -  ***Rotação Dupla à Direita (RDD)***
 
 
-##### Método RSE
+##### Rotação Simples à Esquerda
 
+Dada uma árvore genérica coma seguinte estrutura :
+
+![[rse1.png]]
+
+Se inserirmos um Nó na sub-árvore  $\gamma$  e ela crescer, o fator de balanceamento do nó **b** passará a ser $1$ enquanto o fator de balanceamento de **a** passaria a ser $2$. Como isso não é possível em uma árvore AVL, é necessário que haja uma Rotação Simples à Esquerda no Nó **a**.
+
+Dessa forma, com a rotação a nossa árvore passará a ter a seguinte estrutura:
+
+![[rse2.png]]
